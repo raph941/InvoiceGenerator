@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     
     # project Apps
     'accounts',
-    'InvoiceGenerator'
+    'invoiceApp',
 ]
 
 MIDDLEWARE = [
@@ -144,7 +144,7 @@ MEDIA_URL = '/media/'
 LOGIN_REDIRECT_URL = '/signup'
 #to redirect our logout to the login page
 #LOGOUT_REDIRECT_URL = 'home'
-#LOGIN_URL = 'login'
+LOGIN_URL = '/login'
 
 # message tags
 MESSAGE_TAGS = {

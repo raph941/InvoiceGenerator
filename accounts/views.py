@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.contrib.auth import views as auth_views
 from accounts.forms import SignupForm
+from django.shortcuts import get_object_or_404, redirect, render
 
 
 # Create your views here.

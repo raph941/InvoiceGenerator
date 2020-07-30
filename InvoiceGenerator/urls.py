@@ -17,10 +17,12 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls import url
 from accounts import views as account_views
+from invoiceApp import views as invoice_views
 
 
 urlpatterns = [
-
+    url(r'^$', invoice_views.home, name='home'),
+    url('invoice/', include('invoiceApp.urls')),
     #authentication urls
     url(r"signup/$", account_views.SignupView, name="signup"),
     url('^', include('django.contrib.auth.urls')),

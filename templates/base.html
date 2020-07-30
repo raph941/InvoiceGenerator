@@ -9,20 +9,27 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/logo.svg' %}">
   <!-- Title -->
+  {% block title %}
   <title>Invoice Generator | Home</title>
+  {% endblock title %}
+  {% block page_style %}
+  {% endblock page_style %}
   <!-- Css sheet -->
   <link rel="stylesheet" href="{% static 'css/header-footer.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+  <!-- Font Awesome -->
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
   <!-- Bootstrap CDN -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
 </head>
 <body>
   <header id="header" class="mb-5 pb-5 container">
     <nav class="navbar w-100">
-
-      <img class="logo__img" src="{% static 'images/logo.svg' %}">
+      <a href="{% url 'home' %}">
+        <img class="logo__img" src="{% static 'images/logo.svg' %}">
+      </a>
       <ul class="">
         <li class="header__link"><a href="{% url 'login' %}">Sign In</a></li>
         <li class="header__link sign__up"><a href="{% url 'signup' %}">Sign Up</a></li>
@@ -31,9 +38,9 @@
   </header>
 
   <!-- Enter your text here -->
-  {% block contenet %}
+  {% block content %}
 
-  {% endblock contenet %}
+  {% endblock content %}
 
   <footer class="mt-5">
     <div class="container row m-auto p-5">
@@ -45,7 +52,7 @@
       <li>Explore</a></li>
       <li><a href="#">About InvoiceIt</a></li>
       <li><a href="#">Browse Templates</a></li>
-      <li><a href="#">Help</a></li>
+      <li><a href="{% url 'faq' %}">Help</a></li>
     </ul>
     <ul class="col-lg">
       <li>Legal</li>
@@ -71,6 +78,9 @@
     </div>
   </footer>
 
-  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+ {% block page_script %}{% endblock page_script %}
 </body>
 </html>

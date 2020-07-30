@@ -33,7 +33,7 @@ a:hover {
 }
 
 
-.btn-success {
+/* .btn-success {
     background-color: #0ABAB5;
     border: thin #0ABAB5 solid;
 }
@@ -42,11 +42,16 @@ a:hover {
     background-color: #0ABAB5;
     border: thin #0ABAB5 solid;
 }
-
+ */
 
 form#loginform button{
-    background:#0ABAB5;
-    border:0px
+    background:#07E0CB;
+    border: none;
+}
+
+form#loginform button:hover {
+    background:#06C7B4;
+    border: none;
 }
 
  div.floatright a, div.floatright p{
@@ -55,10 +60,6 @@ form#loginform button{
 
 .error{
     background-color: red;
-}
-
-a:hover {
-    color: #c4c4c4;
 }
 
 .mt-5, .my-5 {
@@ -92,36 +93,4 @@ a:hover {
     font-size:3em;
     }
 }
- .navbar-brand{
-font-family: Pacifico;
-color: white;
-font-size: 500px;
-}
-.navbar-brand h3 span{
-color: #0ABAB5
-}
-.navbar-brand :hover{
-color: rgb(255, 255, 255);
-}
-.mykel-header{
-background: #091429
-}
-.mykel-header .nav-link{
-font-size: 15px;
-color: aliceblue;
-}
-.navbar-collapse{
-justify-content: flex-end
-}
-.pricing{
-width: 100%;
-padding: 70px;
-}
-.pricing .title-header{
-text-align: center
-}
-.pricing .title-header h1{ 
-font-size: 65px;
-padding-left: 160px;
-padding-right: 160px;
-}
+ 

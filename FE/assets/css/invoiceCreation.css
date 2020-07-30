@@ -1,0 +1,130 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif !important;
+  font-size: 16px;
+}
+
+:root {
+  --text-color: #000000;
+}
+
+/* Invoice Creation */
+
+#invoiceCreation .container {
+  border: 1px solid #c4c4c4;
+  box-sizing: border-box;
+}
+
+.btn-actions:hover {
+  opacity: 0.7;
+}
+
+.btn-send {
+  border: 2px solid #07edd6 !important;
+  padding: 0.5rem 1.2rem;
+  border-radius: 10px;
+  font-weight: 400;
+}
+
+.btn-send:hover {
+  border: 2px solid #06c7b4 !important;
+  background-color: #06c7b4;
+  color: white !important;
+}
+
+.image-upload label {
+  cursor: pointer;
+}
+
+.image-upload > input {
+  display: none;
+}
+
+#invoiceName {
+  border: 1px solid #ced4da;
+  font-size: 2rem;
+  text-align: right;
+  padding: 0.2rem 0.5rem;
+}
+
+@media screen and (max-width: 500px){
+  #invoiceName {
+    font-size: 1rem;
+
+  }
+
+}
+
+#invoiceNumber {
+  border: 1px solid #ced4da;
+  font-size: 1rem;
+  text-align: right;
+  padding: 0.2rem 0.5rem;
+}
+
+.invoiceCreation__inputGen {
+  border: 1px solid #ced4da;
+  font-size: 1.1rem;
+  text-align: left;
+  padding: 0.2rem 0.5rem;
+   color: black;
+   background-color: white;
+   width: 100%;
+}
+
+
+.invoiceCreation__info{
+  border: none;
+   font-size: 1.1rem;
+  text-align: left;
+  padding: 0.2rem 0.5rem;
+   color: #ced4da;
+   background-color: white;
+   width: 100%;
+}
+
+
+.invoiceCreation__date{
+    border: 1px solid #ced4da;
+    font-size: 1.1rem;
+    text-align: left;
+    padding: 0.2rem 0.5rem;
+     color: #757575;
+     background-color: white;
+     text-align: right;
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+color: #757575;    
+
+}
+.table__hr{
+background-color: #2C988E;
+height: 1px;
+
+}
+
+
+.table__info{
+  position: relative;
+}
+
+.close__container{
+  position: absolute;
+  right: 0;
+  top: 10px;
+  cursor: pointer;
+}
+
+.close__container:hover.close__container{
+  opacity: 0.7;
+  ;
+}
+
+/* Invoice Creation */

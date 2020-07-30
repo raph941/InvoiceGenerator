@@ -81,9 +81,7 @@
 }
 
 @media (max-width: 414px) {
-    .block {
-        margin-top: 0px;
-    }
+   
     .block__banner {
         padding: 20px 0px;
         width: 100% !important;

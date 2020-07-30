@@ -1,5 +1,5 @@
 # InvoiceGenerator
-# 127.0.0.1:5000/api is the local url
+# 127.0.0.1:8000 is the local url
 
 Please read all instructions carefully as pull requests will be carefully accessed before being merged
 

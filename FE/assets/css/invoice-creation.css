@@ -1,0 +1,28 @@
+.actions {
+    margin-bottom: 10px;
+    display: block;
+}
+
+.content {
+    border: 1px solid #000;
+    min-height: 700px;
+}
+
+.section-one {
+    border: 1px solid #000;
+    display: block;
+    min-width: 300px;
+}
+
+.section-two {
+    border: 1px solid #000;
+    display: inline-block;
+}
+
+.left {
+    border: 1px solid #000;
+}
+
+.right {
+    border: .5px solid #000;
+}

@@ -19,6 +19,8 @@ h4 {
 .signinform {
     border: thin #c4c4c4 solid;
     border-radius: 1% 1% 1% 1%;
+    max-width: 500px;
+    margin: auto;
 }
 
 a {
@@ -57,6 +59,10 @@ form#loginform button{
 
 a:hover {
     color: #c4c4c4;
+}
+
+.mt-5, .my-5 {
+    margin: 6rem auto !important;
 }
 
 @media only screen and (max-width: 770px) {

@@ -23,6 +23,7 @@ urlpatterns = [
 
     #authentication urls
     url(r"signup/$", account_views.SignupView, name="signup"),
+    url('^', include('invoiceApp.urls')),
     url('^', include('django.contrib.auth.urls')),
 
     path('admin/', admin.site.urls),

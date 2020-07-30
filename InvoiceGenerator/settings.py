@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 import os
 import dj_database_url
 from decouple import config, Csv
+from django.contrib.messages import constants as messages
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -41,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     
     # project Apps
+    'accounts',
     'InvoiceGenerator'
 ]
 
@@ -55,6 +57,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'InvoiceGenerator.urls'
+
+AUTH_USER_MODEL = 'accounts.User'
 
 TEMPLATES = [
     {
@@ -126,8 +130,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
@@ -136,7 +138,16 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 #to redirect our login to homepage
-#LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/signup'
 #to redirect our logout to the login page
 #LOGOUT_REDIRECT_URL = 'home'
 #LOGIN_URL = 'login'
+
+# message tags
+MESSAGE_TAGS = {
+    messages.DEBUG: 'alert-info',
+    messages.INFO: 'alert-info',
+    messages.SUCCESS: 'alert-success',
+    messages.WARNING: 'alert-warning',
+    messages.ERROR: 'alert-danger',
+}

@@ -20,7 +20,6 @@
     <!-- Font awesome -->
     <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
     <!-- Css sheet -->
-    <link rel="stylesheet" href="../assets/css/header-footer.css">
     <link rel="stylesheet" href="../assets/css/invoiceCreation.css">
 </head>
 
@@ -30,15 +29,16 @@
     <!-- Enter your text here -->
     <!-- Invoice Creation -->
 
-    
+    <div id="content">
+        <!-- HTML contnet goes here -->
         <section id="invoiceCreation">
             <div class="container mt-5 pt-5 mb-5">
-                <form>
+                <!-- <form> -->
                     <!--Top Links-->
                     <div class="invoiceCreation__buttons d-flex justify-content-between">
                         <div>
                             <a class="btn btn-actions"> <i class="fas fa-print mr-1"></i> Print</a>
-                            <button class="btn btn-actions" onclick="savePdf()"> <i class="far fa-file-pdf mr-1"></i> PDF </button>
+                            <button class="btn btn-actions" id="generate" onclick="generatePDF()"> <i class="far fa-file-pdf mr-1"></i> PDF </button>
                         </div>
     
                         <button type="submit" class=" btn btn-send"> Preview/Send </button>
@@ -240,10 +240,10 @@
                         </div>
                     </div>
                     <!--Notes-->
-                </form>
+                <!-- </form> -->
             </div>
         </section>
-    
+    </div>
 
     
 
@@ -259,8 +259,10 @@
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
 
-        <!-- JsPdf cdn  -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+    <!-- JsPdf cdn  -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+
+    <script src="https://github.com/niklasvh/html2canvas/releases/download/v1.0.0-alpha.12/html2canvas.min.js"></script>
 
     <script src="../assets/js/invoiceCreation.js"></script>
 </body>

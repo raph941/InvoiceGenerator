@@ -36,17 +36,23 @@
 .one3{
     color: #036158;
 }
+.one1 button a{
+    color: #152724;
+}
+.one button{
+  padding: .5rem 1rem;
+}
 .btn1{
     background: #07EDD6;
-    border-radius: 10px;
+    border-radius: .25rem;
     padding: 5px 10px;
     color: #152724;
-    border: none;
+    border: 2px solid #07EDD6;
     margin-right: 10px;
 }
 .btn2{
     background: #ffffff; ;
-    border-radius: 10px;
+    border-radius: .25rem;
     padding: 5px 10px;
     color: #07EDD6 ;
     border: 2px solid #07EDD6;
@@ -269,7 +275,7 @@
     }
     .btn1{
         background: #07EDD6;
-        border-radius: 10px;
+        /* border-radius: 10px; */
         padding: 5px 55px;
         color: #152724;
         border: none;
@@ -279,7 +285,7 @@
     }
     .btn2{
         background: #ffffff; ;
-        border-radius: 10px;
+        /* border-radius: 10px; */
         padding: 5px 10px;
         color: #07EDD6 ;
         border: 2px solid #07EDD6;
@@ -509,7 +515,7 @@
     }
     .btn1{
         background: #07EDD6;
-        border-radius: 10px;
+        /* border-radius: 10px; */
         padding: 5px 20px;
         color: #152724;
         border: none;
@@ -519,8 +525,8 @@
     
     }
     .btn2{
-        background: #ffffff; ;
-        border-radius: 10px;
+        background: #ffffff; 
+        /* border-radius: 10px; */
         padding: 5px 10px;
         color: #07EDD6 ;
         border: 2px solid #07EDD6;
@@ -753,10 +759,10 @@
     }
     .btn1{
         background: #07EDD6;
-        border-radius: 10px;
-        padding: 5px 20px;
+        /* border-radius: 10px; */
+        /* padding: 5px 20px; */
         color: #152724;
-        border: none;
+        /* border: none; */
         margin-right: 0px;
         width: 80%;
         margin-bottom: 15px;
@@ -764,8 +770,8 @@
     }
     .btn2{
         background: #ffffff; ;
-        border-radius: 10px;
-        padding: 5px 10px;
+        /* border-radius: 10px; */
+        /* padding: 5px 10px; */
         color: #07EDD6 ;
         border: 2px solid #07EDD6;
         margin-right: 10px;

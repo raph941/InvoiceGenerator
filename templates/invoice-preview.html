@@ -5,9 +5,21 @@
     <title>InvoiceIt - FAQ</title>
 {% endblock title %}
 {% block page_style %}
-    <link rel="stylesheet" href="{% static 'css/invoiceCreation.css' %}">
+    <link rel="stylesheet" href="{% static 'css/loading-animation.css' %}">
 {% endblock page_style %}
 
 {% block content %}
-<h1>Invoic Preview</h1>
+
+<!-- Enter your text here -->
+  <div class="container">
+    <div class="loading">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+     
+  </div>
+  <p class="text-center">Loading, please wait...</p>
+
+
 {% endblock content %}

@@ -16,3 +16,10 @@ class InvoiceModel(models.Model):
 
     def __str__(self):
         return f'Invoice Number : { self.invoice_number }'
+
+class ProductModel(models.Model):
+    invoice             = models.ForeignKey(InvoiceModel, on_delete=models.CASCADE)
+    description         = models.CharField(max_length=550, null=True, blank=True)
+    rate                = models.IntegerField(default=0, null=True, blank=True)
+    quantity            = models.IntegerField(default=0, null=True, blank=True)
+    price               = models.IntegerField(default=0, null=True, blank=True)

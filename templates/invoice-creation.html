@@ -21,13 +21,13 @@
                 <button id="data-store" class="d-none" url-href="{% url 'create_invoice' %}"></button>
                 <div class="invoiceCreation__buttons d-flex justify-content-between">
                     <div>
-                        <a href="{% url 'invoice_preview' %}" class="btn btn-actions"> <i class="fas fa-print mr-1"></i> Print</a>
+                        <a id="print_btn" href="{% url 'invoice_preview' %}" class="btn btn-actions"> <i class="fas fa-print mr-1"></i> Print</a>
                         <button class="btn btn-actions"> <i class="far fa-file-pdf mr-1"></i> 
-                            <a class="ancor__link" href=" {% url 'invoice_preview' %}">PDF </a>
+                            <a id="pdf_btn" class="ancor__link" href=" {% url 'invoice_preview' %}">PDF </a>
                         </button>
                     </div>
 
-                    <button type="submit" class=" btn btn-send"> <a class="ancor__link" href=" {% url 'invoice_preview' %}">Preview/Send</a></button>
+                    <button id="preview_btn" type="submit" class=" btn btn-send"> <a class="ancor__link" href=" {% url 'invoice_preview' %}">Preview/Send</a></button>
                 </div>
                 <!--Top Links-->
 

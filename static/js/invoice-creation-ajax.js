@@ -29,23 +29,24 @@
 // })
 
 let collectData = function(){
-    var invoiceName    = $('#invoiceName').attr('value')
-    var invoiceNumber  = $('#invoiceNumber').attr('value')
-    var companyName     = $('#companyName').attr('value')
-    var companyAddress  = $('#companyAddress').attr('value')
-    var companyCity  = $('#companyCity').attr('value')
-    var companyCountry  = $('#companyCountry').attr('value')
-    var invoiceDate  = $('#invoiceDate').attr('value')
-    var dueDate  = $('#dueDate').attr('value')
-    var clientName  = $('#clientName').attr('value')
-    var clientAddress  = $('#clientAddress').attr('value')
-    var clientCity  = $('#clientCity').attr('value')
-    var clientCountry  = $('#clientCountry').attr('value')
+    var invoiceName    = $('#invoiceName').val()
+    var invoiceNumber  = $('#invoiceNumber').val()
+    var companyName     = $('#companyName').val()
+    var companyAddress  = $('#companyAddress').val()
+    var companyCity  = $('#companyCity').val()
+    var companyCountry  = $('#companyCountry').val()
+    var invoiceDate  = $('#invoiceDate').val()
+    var dueDate  = $('#dueDate').val()
+    var clientName  = $('#clientName').val()
+    var clientAddress  = $('#clientAddress').val()
+    var clientCity  = $('#clientCity').val()
+    var clientCountry  = $('#clientCountry').val()
 
-    console.log(invoiceDate)
-    console.log(companyName)
+    
+    
 }
 
-$('.publish').click(function(e){
+$('#preview_btn').click(function(e){
+    e.preventDefault()
     collectData()  
-}
+})

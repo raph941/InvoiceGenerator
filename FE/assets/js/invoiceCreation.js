@@ -140,3 +140,5 @@ function updateTotal() {
     taxElement.innerHTML = parseFloat(tax).toFixed(2)
     totalElement.innerHTML = total + (total * 0.10)
 }
+
+

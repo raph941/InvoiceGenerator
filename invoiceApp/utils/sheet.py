@@ -60,4 +60,3 @@ def user_invoice():
              sheet[itemposition]=item[key]
              count+=1
     workbook.save(filename="invoice.xlsx")
-user_invoice()

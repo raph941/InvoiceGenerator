@@ -1,30 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
+{% load static %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/faq.css">
-    <link rel="stylesheet" href="./assets/css/header-footer.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/logo.svg">
+{% block title %}
     <title>InvoiceIt - FAQ</title>
-</head>
+{% endblock title %}
+{% block page_style %}
+    <link rel="stylesheet" href="{% static 'css/faq.css' %}">
+{% endblock page_style %}
 
-<body>
-    <header id="header" class="mb-5 pb-5 container">
-        <nav class="navbar w-100">
+{% block content %}
 
-            <img class="logo__img" src="./assets/images/logo.svg">
-            <ul class="">
-                <li class="header__link"><a href="./signin.html">Sign In</a></li>
-                <li class="header__link sign__up"><a href="./sign-up.html">Sign Up</a></li>
-            </ul>
-        </nav>
-    </header>
     <div class="block">
         <div class="block__banner">
             <h1>Frequently asked questions</h1>
@@ -75,51 +60,9 @@
         </div>
     </div>
 
-    <footer class="mt-5">
-        <div class="col-xl-11 row m-auto p-5">
-            <div class="col-lg-4">
-                <img class="mb-4 logo__img" src="./assets/images/footer-logo.svg">
-                <p>Invoice generator on-the-go for all freelancers. Super easy and fast. Look professional with InvoiceIt</p>
-            </div>
-            <ul class="col-lg">
-                <li>Explore</a>
-                </li>
-                <li><a href="#">About InvoiceIt</a></li>
-                <li><a href="#">Browse Templates</a></li>
-                <li><a href="#">Help</a></li>
-            </ul>
-            <ul class="col-lg">
-                <li>Legal</li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms of Use</a></li>
-                <li><a href="#">Cookie Policy</a></li>
-            </ul>
-            <div class="col-lg">
-                <ul>
-                    <li>Contact</li>
-                    <li><a href="#">support@invoiceit.io</a></li>
-                </ul>
-                <section>
-                    <a href="#"><i class="fa fa-instagram"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-youtube"></i></a>
-                </section>
-            </div>
-        </div>
-        <div class="col-12 p-4 trademark text-center">
-            <small>&copy; InvoiceIt, All Rights Reserved</small>
-        </div>
-    </footer>
+    {% endblock content %}
 
-
-
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="assets/js/faq.js"></script>
-</body>
-
-</html>
+    {% block page_script %}
+        <script src="{% static 'js/faq.js' %}" ></script>
+    {% endblock page_script %}
+    

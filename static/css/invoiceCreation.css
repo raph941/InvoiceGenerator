@@ -31,6 +31,11 @@ body {
   font-weight: 400;
 }
 
+.ancor__link, .ancor__link:hover{
+  color: black;
+  text-decoration: none;
+}
+
 .btn-send:hover {
   border: 2px solid #06c7b4 !important;
   background-color: #06c7b4;

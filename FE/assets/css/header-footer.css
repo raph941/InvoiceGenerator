@@ -2,6 +2,12 @@ body {
   font-family: "Roboto", sans-serif !important;
   font-size: 16px;
 }
+a{
+  text-decoration: none !important;
+}
+a:hover{
+  text-decoration: none !important;
+}
 
 header nav {
   padding: 20px 0 !important;
@@ -53,20 +59,22 @@ header nav ul .sign__up:hover a {
 }
 
 footer {
-  color: #e5fdf8;
+  color: #e5fdf8 !important;
   font-size: 16px;
   font-weight: 300;
   line-height: 2;
   background-color: #152724;
 }
-
-footer a {
-  color: #e5fdf8;
+footer section{
+  display: flex;
+}
+footer a,footer p {
+  color: #e5fdf8 !important;
 }
 
 footer a:hover {
   text-decoration: none;
-  color: #10d3aa;
+  color: #10d3aa !important;
 }
 
 footer ul {
@@ -87,8 +95,12 @@ footer ul li:nth-child(1) {
 footer i {
   margin: 0 10px;
   font-size: 25px !important;
+  color: #e5fdf8 !important;
 }
 
+footer small{
+  color: #e5fdf8 !important;
+}
 footer .trademark {
   border-top: 1px solid rgba(122, 122, 122, 0.5);
 }
@@ -102,8 +114,10 @@ footer .trademark {
   footer{
     line-height: 1.7;    
   }
+
   footer ul li:nth-child(1) {
-    font-size: 15px;
+    font-size: 17px;
+    font-weight: 600;
     padding-bottom: .5rem;
   }
 }
@@ -112,5 +126,8 @@ footer .trademark {
   
   footer{
     font-size: 14px;
+  }
+  footer section{
+    justify-content: space-between;
   }
 }

@@ -1,51 +1,52 @@
-// $(document).ready(function() {
-//     $('.publish').click(function(e){
-//         e.preventDefault();
-//         var story_id = this_.attr('id').split('_')[1];
-//         var PublishUrl = this_.attr("data_href")
-//         //var id = $('btn-activate').attr("id")
-//         console.log(story_id)
+//Create PDf from HTML...
+function generatePDF() {
+    var HTML_Width = $("#content").width();
+    var HTML_Height = $("#content").height();
+    var top_left_margin = 15;
+    var PDF_Width = HTML_Width + (top_left_margin * 2);
+    var PDF_Height = (PDF_Width * 1.5) + (top_left_margin * 2);
+    var canvas_image_width = HTML_Width;
+    var canvas_image_height = HTML_Height;
 
-//         $.ajax({
-//         url: PublishUrl,
-//         method: "GET",
-//         data: {
-//             "story_id":story_id,
-//         },
+    var totalPDFPages = Math.ceil(HTML_Height / PDF_Height) - 1;
 
-//         success: function(data){
-//             console.log(data)
-//             var published_count = data.published_stories;
-//             var unpublished = data.unpublished_stories;
-//             var denied = data.denied_stories;
 
-//             $(".row_" + story_id).text("");
-//             $(".published_stories").text(published_count);
-//             $(".unpublished_stories").text(unpublished);
-//             $(".denied_stories").text(denied);
-//         }
-//     })
-// })
-// })
+    html2canvas($("#content")[0]).then(function (canvas) {
+        var imgData = canvas.toDataURL("image/jpeg", 1.0);
+        var pdf = new jsPDF('p', 'pt', [PDF_Width, PDF_Height]);
+        pdf.addImage(imgData, 'JPG', top_left_margin, top_left_margin, canvas_image_width, canvas_image_height);
+        for (var i = 1; i <= totalPDFPages; i++) { 
+            pdf.addPage(PDF_Width, PDF_Height);
+            pdf.addImage(imgData, 'JPG', top_left_margin, -(PDF_Height*i)+(top_left_margin*4),canvas_image_width,canvas_image_height);
+        }
+        pdf.save("invoice.pdf");
+    });
+}
+
+$('#generate1, #generate2').click(function(){
+    generatePDF()
+})
+
 
 let collectData = function(){
-    var invoiceName    = $('#invoiceName').attr('value')
-    var invoiceNumber  = $('#invoiceNumber').attr('value')
-    var companyName     = $('#companyName').attr('value')
-    var companyAddress  = $('#companyAddress').attr('value')
-    var companyCity  = $('#companyCity').attr('value')
-    var companyCountry  = $('#companyCountry').attr('value')
-    var invoiceDate  = $('#invoiceDate').attr('value')
-    var dueDate  = $('#dueDate').attr('value')
-    var clientName  = $('#clientName').attr('value')
-    var clientAddress  = $('#clientAddress').attr('value')
-    var clientCity  = $('#clientCity').attr('value')
-    var clientCountry  = $('#clientCountry').attr('value')
+    var invoiceName    = $('#invoiceName').val()
+    var invoiceNumber  = $('#invoiceNumber').val()
+    var companyName     = $('#companyName').val()
+    var companyAddress  = $('#companyAddress').val()
+    var companyCity  = $('#companyCity').val()
+    var companyCountry  = $('#companyCountry').val()
+    var invoiceDate  = $('#invoiceDate').val()
+    var dueDate  = $('#dueDate').val()
+    var clientName  = $('#clientName').val()
+    var clientAddress  = $('#clientAddress').val()
+    var clientCity  = $('#clientCity').val()
+    var clientCountry  = $('#clientCountry').val()
 
-    console.log(invoiceDate)
-    console.log(companyName)
+    
+    
 }
 
-$('.publish').click(function(e){
+$('#preview_btn').click(function(e){
+    e.preventDefault()
     collectData()  
-}
+})

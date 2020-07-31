@@ -28,8 +28,9 @@ urlpatterns = [
     url(r"faq/$", views.faqView, name="faq"),
     url(r"contact/$", views.contactView, name="contact"),
     url(r"pricing/$", views.pricingView, name="pricing"),
-    url(r"user-statistic/$", views.userStatisticsView, name="statistics"),
+    url(r"statistic/$", views.userStatisticsView, name="statistics"),
     url(r"guide/$", views.invoiceGuideView, name="giude"),
+    url(r"privacy/$", views.privacyPolicyView, name="privacy"),
     url(r"dashboard/$", views.dashboardView, name="contact"),
 
     url('invoice/', include('invoiceApp.urls')),

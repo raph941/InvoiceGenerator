@@ -4,25 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  <!-- Favicon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />  <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/logo.svg">
   <!-- Title -->
-  <title>Invoice Generator | Invoice Creation</title>
+  <title>InvoiceIt | Success</title>
   <!-- Css sheet -->
+  <link rel="stylesheet" href="./assets/css/landingpage.css">
   <link rel="stylesheet" href="./assets/css/header-footer.css">
-  <link rel="stylesheet" href="./assets/css/invoice-creation.css">
+
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
   <!-- Bootstrap CDN -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./assets/css/success.css">
+
 </head>
 <body>
-  <header id="header" class="mb-5 pb-5 container">
+  <header id="header" class="pb-5 container">
     <nav class="navbar w-100">
-
-      <img class="logo__img" src="./assets/images/logo.svg">
+      <a href="./index.html"><img class="logo__img" src="./assets/images/logo.svg"></a>
       <ul class="">
         <li class="header__link"><a href="./signin.html">Sign In</a></li>
         <li class="header__link sign__up"><a href="./sign-up.html">Sign Up</a></li>
@@ -30,68 +31,42 @@
     </nav>
   </header>
 
-  <!-- Enter your text here -->
-
-  <div class="container">
-      <a href="#content">Click to edit the text</a>
-      <div class="content" id="content">
-        <div class="flex-content">
-            <div>
-                <a href="#"><i class="fa fa-print"></i> Print</a>
-                <a href="#"><i class="fa fa-file-powerpoint-o"></i> PDF</a>
-                <a href="#"><i class="fa fa-file-excel-o"></i> Excel</a>
+  <section class="container">
+      <div class="success-wrap mx-auto">
+        <div class="mx-auto">
+            <div class="success-icon text-center">
+                <span class="fas fa-check" aria-hidden="true"></span>
             </div>
-           <div class="btn">
-               <a href="#">Preview/Send</a>
-           </div>
-        </div>
-
-        <div>
-            <div>
-                <h3>INVOICE</h3>
-            </div>
-            <div>
-                <a href="" type="file"><i class="fa fa-plus-circle"></i></a>
-
-                <div><h4>Invoice#</h4></div>
-            </div>
-        </div>
-        <div class="section-one">
-            <div class="left col-md-5"></div>
-            <div class="right col-md-5"></div>
-        </div>
-        <div class="section-two">
-            <div class="col-md-3"></div>
-            <div class="col-md-3"></div>
-            <div class="col-md-3"></div>
-            <div class="col-md-3"></div>
+            <h1>Thank you for invoicing with us!</h1>
+            <p>Your invoice has been generated and will be downloaded automatically, you can find it in your download folder</p>
+            <a class="btn btn-primary mb-4" href="#">Create a new Invoice</a>
+            <a class="btn btn-primary" href="#">Go to my invoices</a>
         </div>
       </div>
-  </div>
-
-
-  <footer class="mt-5">
+  </section>
+ 
+  <footer>
     <div class="container row m-auto p-5">
       <div class="col-lg-4">
-        <img class="mb-4 logo__img" src="./assets/images/footer-logo.svg">
+        <a href="./index.html"><img class="mb-4 logo__img" src="./assets/images/footer-logo.svg"></a>
         <p>Invoice generator on-the-go for all freelancers. Super easy and fast. Look professional with InvoiceIt</p>
       </div>
     <ul class="col-lg">
       <li>Explore</a></li>
-      <li><a href="#">About InvoiceIt</a></li>
+      <li><a href="about.html">About InvoiceIt</a></li>
       <li><a href="#">Browse Templates</a></li>
       <li><a href="#">Help</a></li>
     </ul>
     <ul class="col-lg">
       <li>Legal</li>
       <li><a href="#">Privacy Policy</a></li>
-      <li><a href="#">Terms of Use</a></li>
-      <li><a href="#">Cookie Policy</a></li>
+      <li><a href="./faq.html">FAQ</a></li>
+      <li><a href="./guide.html">Guide</a></li>
     </ul>
     <div class="col-lg">
       <ul>
         <li>Contact</li>
-        <li><a href="#">Support</a></li>
+        <li><a href="#">support@invoiceit.io</a></li>
       </ul>
       <section>
         <a href="#"><i class="fa fa-instagram"></i></a>
@@ -105,7 +80,5 @@
       <small>&copy; InvoiceIt, All Rights Reserved</small>
     </div>
   </footer>
-
-  
 </body>
 </html>

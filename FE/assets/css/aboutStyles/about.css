@@ -1,5 +1,7 @@
 
 
+/* Global Styles */
+
 body{
  font-family: 'Ubuntu', sans-serif;
  padding: 0;
@@ -11,6 +13,61 @@ p,a{
  color:black;
 }
 
+/* nav stayles */
+
+header nav {
+ padding: 10px 0 !important;
+}
+
+header nav ul {
+ margin: 0;
+ padding: 0;
+ display: flex;
+}
+
+header nav ul li {
+ padding:8px;
+ list-style: none;
+ border: 2px solid #2C988E;
+ border-radius: 5px;
+ margin: 0 8px;
+ cursor: pointer;
+}
+
+header nav ul li a {
+ color: #152724;
+ font-size: 12 px;
+}
+
+header nav ul li a:hover {
+ text-decoration: none;
+ color: #152724;
+}
+
+header nav ul li:hover {
+ border-color: #2C988E;
+ color: #152724;
+}
+
+header nav ul .sign__up {
+ background-color: #07EDD6;
+}
+
+header nav ul .sign__up a {
+ color: black !important;
+}
+
+header nav ul .sign__up:hover {
+ background-color: #06C7B4;
+}
+
+header nav ul .sign__up:hover a {
+ color: white !important;
+}
+
+/* about container styles */
+
+
 .about-header{
  text-align: center;
  background: linear-gradient(to right, rgba(0, 0, 0, 0.11) , rgba(0, 0, 0, 0.158)),url('./download.png');
@@ -18,12 +75,13 @@ p,a{
  background-position: center;
  background-size: cover;
  overflow: hidden;
- padding: 20px;
+ padding: 10px;
  padding-top: 30px;
  padding-bottom: 30px;
 }
 ul{
  text-align: left;
+ padding: 0;
 }
 .about-header .int{
  color: #035951;
@@ -37,7 +95,7 @@ ul{
 }
 .about-header .first ul{
  list-style: none;
- margin-top: 90px;
+ margin-top:20px;
 }
 .about-text h1{
  color: #035951;
@@ -47,10 +105,12 @@ ul{
  color: #035951;
 }
 .about-text{
- margin-bottom:50px;
+ margin-bottom:30px;
 }
 .buttom-icon{
- margin-top: 50px;
+ margin-top: 30px;
+ margin-bottom: 15px;
+ text-align: center;
 }
 .buttom-icon i{
  margin: 10px;
@@ -90,83 +150,22 @@ ul{
 }
 .first li{
  display: inline;
- margin: auto 10px;
+ margin: auto 20px;
 }
-@media screen and (max-width: 900px){
-
- .about-header .first ul{
-  padding: 0;
-  margin: auto;
-  margin-top: 0px;
- }
- .first{
-  text-align: center;
-  margin: auto;
-  margin-bottom: 20px;
- }
- .first li{
-  display: inline;
-  margin: auto 10px;
- }
- .second h2{
-  font-size:23px;
-  font-weight: 600;
- }
+.first ul{
+ text-align: center;
 }
-
-header nav {
- padding: 10px 0 !important;
+.about-header hr{
+ width: 50%;
+ margin: auto;
+ border: 1px solid rgba(255, 255, 255, 0.723);
 }
-
-header nav ul {
- margin: 0;
- padding: 0;
- display: flex;
-}
-
-header nav ul li {
- padding: .7rem 1rem;
- list-style: none;
- border: 2px solid white;
- border-radius: 5px;
- margin: 0 10px;
- cursor: pointer;
-}
-
-header nav ul li a {
- color: #152724;
-}
-
-header nav ul li a:hover {
- text-decoration: none;
- color: #152724;
-}
-
-header nav ul li:hover {
- border-color: #2C988E;
- color: #152724;
-}
-
-header nav ul .sign__up {
- background-color: #07EDD6;
-}
-
-header nav ul .sign__up a {
- color: black !important;
-}
-
-header nav ul .sign__up:hover {
- background-color: #06C7B4;
-}
-
-header nav ul .sign__up:hover a {
- color: white !important;
-}
+/* footer styles */
 
 footer {
- background-color: #152724;
+ background-color: #24413c;
  color: #E5FDF8;
- font-size: 18px;
+ font-size: 13px;
  font-weight: 300;
  line-height: 2;
 }
@@ -203,3 +202,34 @@ footer i {
 footer .trademark {
  border-top: 1px solid rgba(122, 122, 122, 0.5);
 }
+
+
+
+
+
+
+
+/* media queries */
+
+@media screen and (max-width: 900px){
+
+ .about-header .first ul{
+  padding: 0;
+  margin: auto;
+  margin-top: 0px;
+ }
+ .first{
+  text-align: center;
+  margin: auto;
+  margin-bottom: 20px;
+ }
+ .first li{
+  display: inline;
+  margin: auto 10px;
+ }
+ .second h2{
+  font-size:23px;
+  font-weight: 600;
+ }
+}
+

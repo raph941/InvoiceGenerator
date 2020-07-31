@@ -25,13 +25,13 @@
     <!--CUSTOM CSS-->
     <link rel="stylesheet" href="./assets/css/contact.css" />
     <link rel="stylesheet" href="./assets/css/header-footer.css" />
-    <title>Contact Us</title>
+    <title>InvoiceIt | Contact Us</title>
   </head>
   <body>
     <!--NAV BAR-->
     <header id="header" class="container">
       <nav class="navbar w-100">
-        <img class="logo__img" src="./assets/images/logo.svg" />
+        <a href="./index.html"><img class="logo__img" src="./assets/images/logo.svg" /></a>
         <ul class="">
           <li class="header__link"><a href="./signin.html">Sign In</a></li>
           <li class="header__link sign__up">
@@ -53,8 +53,8 @@
       </div>
 
       <!--CONTACT FORM FOR SMALL TO MEDIUM SCREENS-->
-      <section class="d-block d-lg-none mt-5 px-5">
-          <div class="row px-5">
+      <section class="d-block d-lg-none mt-5 mb-5 px-md-5">
+          <div class="row px-md-5">
               <div class="col-12 px-5 py-5 bg-white" style="box-shadow: 3px 3px 5px 6px rgba(0, 0, 0, 0.25);">
                 <form action="/">
                     <div class="form-row">
@@ -98,7 +98,7 @@
                     </div>
                     <button
                       type="submit"
-                      class="px-5 py-3 border-0 font-weight-bold text-white"
+                      class=" btn px-5 py-3 border-0 font-weight-bold text-white"
                       style="
                         font-size: 16px;
                         background-color: #07edd6;
@@ -109,7 +109,7 @@
                     </button>
                   </form>
             </div>
-            <div class="col-12 x-5 py-5" style="background-color: #036158; box-shadow: 0px 4px 5px 6px rgba(0, 0, 0, 0.25);">
+            <div class="col-12 px-5 py-5" style="background-color: #036158; box-shadow: 0px 4px 5px 6px rgba(0, 0, 0, 0.25);">
                 <h5 class="mb-4" style="color: #f2f2f2;">Reach Us</h5>
             <p class="mb-4" style="color: #f2f2f2;">
               <i
@@ -188,7 +188,7 @@
               </div>
               <button
                 type="submit"
-                class="px-5 py-3 border-0 font-weight-bold text-white"
+                class="btn px-5 py-3 border-0 font-weight-bold text-white"
                 style="
                   font-size: 16px;
                   background-color: #07edd6;
@@ -231,46 +231,43 @@
     </main>
 
     <!--FOOTER-->
-    <footer class="mt-5">
-      <div class="container row m-auto p-5">
-        <div class="col-lg-4">
-          <img class="mb-4 logo__img" src="./assets/images/footer-logo.svg" />
-          <p style="color: #e5fdf8;">
-            Invoice generator on-the-go for all freelancers. Super easy and
-            fast. Look professional with InvoiceIt
-          </p>
-        </div>
-        <ul class="col-lg">
-          <li>Explore</li>
-          <li><a href="#">About InvoiceIt</a></li>
-          <li><a href="#">Browse Templates</a></li>
-          <li><a href="#">Help</a></li>
-        </ul>
-        <ul class="col-lg">
-          <li>Legal</li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Terms of Use</a></li>
-          <li><a href="#">Cookie Policy</a></li>
-        </ul>
-        <div class="col-lg">
-          <ul>
-            <li>Contact</li>
-            <li><a href="#">Support</a></li>
-          </ul>
-          <section>
-            <a href="#"><i class="fa fa-instagram" style="color: #f2f2f2;"></i></a>
-            <a href="#"><i class="fa fa-twitter" style="color: #f2f2f2;"></i></a>
-            <a href="#"><i class="fa fa-facebook" style="color: #f2f2f2;"></i></a>
-            <a href="#"><i class="fa fa-youtube" style="color: #f2f2f2;"></i></a>
-          </section>
-        </div>
-      </div>
-      <div class="col-12 p-4 trademark text-center">
-        <small style="color: #e5fdf8;"
-          >&copy; InvoiceIt, All Rights Reserved</small
-        >
-      </div>
-    </footer>
+    
+ <footer >
+  <div class="col-xl-11 row m-auto p-5">
+    <div class="col-lg-4">
+      <a href="index.html"><img class="mb-4 logo__img" src="./assets/images/footer-logo.svg"></a> 
+      <p>Invoice generator on-the-go for all freelancers. Super easy and fast. Look professional with InvoiceIt</p>
+    </div>
+  <ul class="col-lg">
+    <li>Explore</a></li>
+    <li><a href="about.html">About InvoiceIt</a></li>
+    <li><a href="./sendInvoice.html">Browse Templates</a></li>
+    <li><a href="./contact.html">Help</a></li>
+  </ul>
+  <ul class="col-lg">
+    <li>Legal</li>
+    <li><a href="#">Privacy Policy</a></li>
+    <li><a href="./pricing_page.html">Pricing</a></li>
+    <li><a href="./faq.html">FAQ</a></li>
+    <li><a href="./guide.html">Guide</a></li>
+  </ul>
+  <div class="col-lg">
+    <ul>
+      <li>Contact</li>
+      <li><a href="./contact.html">support@invoiceit.io</a></li>
+    </ul>
+    <section class="text-white">
+      <a href="#"><i class="text-white fa fa-instagram"></i></a>
+      <a href="#"><i class="text-white fa fa-twitter"></i></a>
+      <a href="#"><i class="text-white fa fa-facebook"></i></a>
+      <a href="#"><i class="text-white fa fa-youtube"></i></a>
+    </section>
+  </div>
+</div>
+  <div class="col-12 p-4 trademark text-center text-white">
+    <small class="text-white">&copy; InvoiceIt, All Rights Reserved</small>
+  </div>
+</footer>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

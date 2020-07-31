@@ -23,11 +23,11 @@
   integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
  </script>
 </head>
-<body>
+<body onscroll="change(this)">
+      <!-- NAVBAR SECTION -->
 
-  <header id="header" class=" container">
+  <header id="header" class=" container-fluid">
     <nav class="navbar w-100">
-
       <img class="logo__img" src="./assets/images/logo.svg">
       <ul class="">
         <li class="header__link"><a href="./signin.html">Sign In</a></li>
@@ -36,6 +36,8 @@
     </nav>
   </header>
 
+  <!-- ABOUT US CONTENT SECTION -->
+
  <section class="about-header">
   <div class="container-fluid">
    <div class="about-text">
@@ -43,25 +45,28 @@
    </div>
   </div>
   <div class="row">
-   <div class=" col-xs-8 col-sm-8 col-md-8 second">
-    <h2>INVOICE GENERATOR</h2>
+   <div class=" col-xs-9 col-sm-9 col-md-9 second">
+    <h2 class=" wow fadeInUp">INVOICE GENERATOR</h2>
     <p>Is a Co-Operative Company by the Group 1 company . An initiative Organization of the HNG teamless interns </p>
     <ul>
      <li class="int">Est. 1990, FEB 21th.</li>
      <div>
-      <i class="fa fa-building my-3"></i>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat eum animi suscipit nesciunt maxime maiores, nesciunt maxime maiores, assumenda laudantium eaque earum a?</p>
+      <i class="fa fa-building my-3  wow slideInRight slow"></i>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat eum animi suscipit nesciunt maxime maiores, assumenda laudantium eaque earum a?</p>
      </div>
+     <hr>
      <li class="int">We are proud to be the top choice among millions of platform.</li>
      <div>
-      <i class="fa fa-bar-chart my-3"></i>
+      <i class="fa fa-bar-chart my-3 wow fadeInUp slow"></i>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat eum animi suscipi animi suscipit nesciunt maxime maiores, assumenda laudantium eaqueanimi suscipit nesciunt maxime maiores, assumenda laudantium eaquet nesciunt maxime maiores, assumenda laudantium eaque earum a?</p>
      </div>
+     <hr>
      <li class="int">Safety And Security Warrant</li>
      <div>
-      <i class="fa fa-lock my-3"></i>
+      <i class="fa fa-lock my-3 wow slideInLeft slow"></i>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat eum animi suscipit nesciunt maxime maiores, assumenda laudantium eaqueanimi suscipit nesciunt maxime maiores, assumenda laudantium eaqueanimi suscipit nesciunt maxime maiores, assumenda laudantium eaque earum a?</p>
      </div>
+     <hr>
     </ul>
     <div class="buttom-icon">
       <i class="fa fa-file-excel-o"></i>
@@ -78,20 +83,20 @@
        </ul>
      </div>
    </div>
-   <div class="col-xs-4 col-sm-4 col-md-4">
-    <div class="image-cont">
-     <img src="./assets/css/aboutStyles/download (1).png" alt="">
+   <div class="col-xs-3 col-sm-3 col-md-3">
+    <div class="image-cont  wow fadeInDown">
+     <img src="./assets/css/aboutStyles/download.png" alt="">
      <div class="about-but">
        <li ><a href="#">View more<i class="fa fa-arrow-right mx-3 animated rubberBand infinite "></i></a></li>
      </div>
     </div>
-    <div class="image-cont">
+    <div class="image-cont  wow slideInLeft">
       <img src="./assets/css/aboutStyles/images.png" alt="">
       <div class="about-but">
         <li ><a href="#">View more<i class="fa fa-arrow-right mx-3 animated rubberBand infinite "></i></a></li>
       </div>
      </div>
-     <div class="image-cont">
+     <div class="image-cont  wow fadeInUp">
       <img src="./assets/css/aboutStyles/download.png" alt="">
       <div class="about-but">
         <li ><a href="#">View more<i class="fa fa-arrow-right mx-3 animated rubberBand infinite "></i></a></li>
@@ -100,8 +105,8 @@
    </div>
   </div>
  </section>
- 
 
+ <!-- FOOTER SECTION -->
  <footer >
   <div class="container row m-auto p-5">
     <div class="col-lg-4">
@@ -138,7 +143,9 @@
   </div>
 </footer>
 
-
-
+<script src="./assets/js/wow.js"></script>
+<script>
+  new WOW().init();
+</script>
 </body>
 </html>

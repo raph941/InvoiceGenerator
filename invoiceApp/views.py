@@ -3,15 +3,16 @@ from .models import InvoiceModel
 from django.contrib.auth.decorators import login_required
 
 
-def home(request):
-    return render(request, 'base.html')
-
 def invoiceCreationView(request):
     invoice_number = len(InvoiceModel.objects.all()) + 1
+    str_in = str(invoice_number)
+    inv_num = str_in.zfill(6)
 
     context = {
-        'invoice_number': invoice_number,
+        'invoice_number': inv_num,
     }
+
+    
     print(context)
 
     return render(request, 'invoice-creation.html', context)
@@ -23,3 +24,6 @@ def invoicePreviewView(request):
 
 def faqView(request):
     return render(request, 'faq.html')
+
+def contactView(request):
+    return render(request, 'contact.html')

@@ -18,11 +18,30 @@ from django.urls import path, include
 from django.conf.urls import url
 from accounts import views as account_views
 from invoiceApp import views as invoice_views
+from django.contrib.auth import views as auth_views
+from . import views
 
 
 urlpatterns = [
-    url(r'^$', invoice_views.home, name='home'),
+    url(r'^$', views.home, name='home'),
+    url(r"about/$", views.aboutView, name="about"),
+    url(r"faq/$", views.faqView, name="faq"),
+    url(r"contact/$", views.contactView, name="contact"),
+    url(r"pricing/$", views.pricingView, name="pricing"),
+    url(r"user-statistic/$", views.userStatisticsView, name="statistics"),
+    url(r"guide/$", views.invoiceGuideView, name="giude"),
+    url(r"privacy/$", views.privacyPolicyView, name="privacy"),
+    url(r"dashboard/$", views.dashboardView, name="contact"),
+
     url('invoice/', include('invoiceApp.urls')),
+
+    path('reset_password/', auth_views.PasswordResetView.as_view(template_name='registration/reset_password.html'), name='reset_password'),
+    path('reset_password_sent/', auth_views.PasswordResetDoneView.as_view(template_name='registration/reset_password_sent.html'), name='password_reset_done'),
+    path('reset/<uidb64>/<token>/', auth_views.PasswordResetConfirmView.as_view(template_name='registration/password_reset_form.html'), name='password_reset_confirm'),
+    path('reset_password_complete/', auth_views.PasswordResetCompleteView.as_view(template_name='registration/password_reset_done.html'), name='password_reset_complete'),
+    # path('', include('django.contrib.auth.urls')),
+
+
     #authentication urls
     url(r"signup/$", account_views.SignupView, name="signup"),
     url('^', include('django.contrib.auth.urls')),

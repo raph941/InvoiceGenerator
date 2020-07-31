@@ -31,3 +31,5 @@ def dashboardView(request):
 def aboutView(request):
     return render(request, 'about.html')
 
+def privacyPolicyView(request):
+    return render(request, 'privacy-policy.html')

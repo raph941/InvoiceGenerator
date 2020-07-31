@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     # project Apps
     'accounts',
     'invoiceApp',
+    'rest_framework',
+    'excel'
 ]
 
 MIDDLEWARE = [

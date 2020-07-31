@@ -21,12 +21,12 @@
                 <div class="invoiceCreation__buttons d-flex justify-content-between">
                     <div>
                         <a href="{% url 'invoice_preview' %}" class="btn btn-actions"> <i class="fas fa-print mr-1"></i> Print</a>
-                        <a href="{% url 'invoice_preview' %}">
-                            <button class="btn btn-actions"> <i class="far fa-file-pdf mr-1"></i> PDF </button>
-                        </a>
+                        <button class="btn btn-actions"> <i class="far fa-file-pdf mr-1"></i> 
+                            <a class="ancor__link" href=" {% url 'invoice_preview' %}">PDF </a>
+                        </button>
                     </div>
 
-                    <button type="submit" class=" btn btn-send"> Preview/Send </button>
+                    <button type="submit" class=" btn btn-send"> <a class="ancor__link" href=" {% url 'invoice_preview' %}">Preview/Send</a></button>
                 </div>
                 <!--Top Links-->
 

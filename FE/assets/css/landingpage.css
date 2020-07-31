@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif !important;
 }
+
 .one{
     margin-left: 9% !important;
     margin-right: 9% !important;
@@ -16,7 +17,7 @@
 }
 .one1 h2{
     font-size: 40px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     font-size: 40px;
     line-height: 50px;
     letter-spacing: 0.03em;
@@ -27,10 +28,10 @@
     line-height: 33px;
     letter-spacing: 0.03em;
     color: rgba(59, 58, 58, 0.9);
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 .one2 img{
-    width: 70% !important;
+    width: 80% !important;
     padding-left: 50px !important;
 }
 .one3{
@@ -39,7 +40,7 @@
 .btn1{
     background: #07EDD6;
     border-radius: 10px;
-    padding: 5px 10px;
+    padding: 10px 10px;
     color: #152724;
     border: none;
     margin-right: 10px;
@@ -47,7 +48,7 @@
 .btn2{
     background: #ffffff; ;
     border-radius: 10px;
-    padding: 5px 10px;
+    padding: 10px 10px;
     color: #07EDD6 ;
     border: 2px solid #07EDD6;
     margin-right: 10px;
@@ -97,6 +98,9 @@
     color: rgba(59, 58, 58, 0.9);
     font-size: 18px;
 }
+.two4 img{
+    width: 90%;
+}
 .two5{
     padding: 20px 30px;
     background: #F8F5F5;
@@ -109,6 +113,9 @@
 .two5 p{
     color: rgba(59, 58, 58, 0.9);
     font-size: 18px;
+}
+.two5 img{
+    width: 90%;
 }
 .two6{
     padding: 20px 30px;
@@ -123,6 +130,9 @@
     color: rgba(59, 58, 58, 0.9);
     font-size: 18px;
 }
+.two6 img{
+    width: 90%;
+}
 .three{
     margin-left: 9%;
     margin-right: 9%;
@@ -132,7 +142,7 @@
     grid-gap: 2rem;
 }
 .three1{
-    padding-right: 50px;
+    padding-right: 10px;
 }
 .three1 h2{
     font-size: 40px;
@@ -149,6 +159,9 @@
 }
 .three2{
     margin-left: 20px;
+}
+.three3 img{
+    width: 97%;
 }
 .four{
     margin-top: 100px;
@@ -219,15 +232,20 @@
 .six1 input{
     background: #FFFFFF;
     border-radius: 10px;
-    padding: 5px 10px;
+    padding: 10px 10px;
     border: none;
     margin-right: 10px;
+    width: 50%;
 }
 .six1 button{
     background: #07EDD6;
     border-radius: 10px;
-    padding: 5px 10px;
+    padding: 10px 10px;
     border: none;
+}
+.seven img{
+    margin-right: 15px;
+    width: 13%;
 }
 
 
@@ -274,7 +292,7 @@
         color: #152724;
         border: none;
         margin-right: 10px;
-        width: 80%;
+        width: 100%;
         margin-bottom: 30px;
     }
     .btn2{
@@ -284,7 +302,7 @@
         color: #07EDD6 ;
         border: 2px solid #07EDD6;
         margin-right: 10px;
-        width: 80%;
+        width: 100%;
     }
     .two{
         margin-top: 100px;
@@ -312,6 +330,7 @@
     .two2{
         margin-left: 20px;
         margin-right: 20px;
+        text-align: center;
     }
     .two3{
         display: grid;
@@ -384,6 +403,9 @@
     }
     .three2{
         margin-left: 20px;
+    }
+    .three3 img{
+        width: 100%;
     }
     .four{
         margin-top: 100px;
@@ -460,13 +482,16 @@
         border-radius: 10px;
         padding: 5px 10px;
         border: none;
-        margin-right: 10px;
+        margin-right: 0px;
+        width: 100%;
+        margin-bottom: 20px;
     }
     .six1 button{
         background: #07EDD6;
         border-radius: 10px;
         padding: 5px 10px;
         border: none;
+        width: 100%;
     }
 }
 
@@ -604,28 +629,31 @@
         margin-right: 10%;
         margin-top: 100px;
         display: grid;
-        grid-template-columns: 1fr ;
-        grid-gap: 2rem;
-        text-align: center;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 0rem;
+        text-align: left;
     }
     .three1{
         padding-right: 0px;
     }
     .three1 h2{
         font-size: 40px;
-        line-height: 50px;
+        line-height: 40px;
         letter-spacing: 0.03em;
         color: #152724;
     
     }
     .three1 p{
         font-size: 18px;
-        line-height: 33px;
+        line-height: 30px;
         letter-spacing: 0.03em;
         color: #3B3A3A;
     }
     .three2{
         margin-left: 20px;
+    }
+    .three3 img{
+        width: 140%;
     }
     .four{
         margin-top: 100px;
@@ -709,6 +737,10 @@
         border-radius: 10px;
         padding: 5px 10px;
         border: none;
+    }
+    .seven img{
+        margin-right: 15px;
+        width: 4%;
     }
 }
 
@@ -848,9 +880,9 @@
         margin-right: 10%;
         margin-top: 100px;
         display: grid;
-        grid-template-columns: 1fr ;
+        grid-template-columns: 1fr 1fr;
         grid-gap: 2rem;
-        text-align: center;
+        text-align: left;
     }
     .three1{
         padding-right: 0px;
@@ -870,6 +902,9 @@
     }
     .three2{
         margin-left: 20px;
+    }
+    .three3 img{
+        width: 120%;
     }
     .four{
         margin-top: 100px;

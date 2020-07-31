@@ -12,7 +12,7 @@
   <!-- Css sheet -->
   <link rel="stylesheet" href="./assets/css/header-footer.css">
   <link rel="stylesheet" href="./assets/css/dashboard.css">
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
   <!-- Bootstrap CDN -->
@@ -31,8 +31,8 @@
         <label class="m-0">Invoices</label>
       </div></a>
       <a href="./usersStatistics.html"><div class="invoices__button my-3">
-        <i class="fas fa-chart-bar"></i>
-        <label class="m-0">	&#128202;Statistics</label>
+        <img src="./assets/images/chart-area-solid.svg">
+        <label class="m-0">	Statistics</label>
       </div></a>
       <a href="invoice-settings.html"><div class="settings position-absolute">
         <i class="fa fa-cog"></i>
@@ -66,7 +66,7 @@
           <input class="w-50" value="2020-09-23" type="date" placeholder="To">
        </div>
         <div class="col input-group md-form form-sm form-2">
-          <input class="form-control my-0 py-1 red-border" type="text" placeholder="Search" aria-label="Search">
+          <input id="myInput" class="form-control my-0 py-1 red-border" type="text" placeholder="Search.." aria-label="Search">
           <div class="input-group-append">
             <span class="input-group-text red lighten-3" id="basic-text1"><i class="fa fa-search text-grey"
                 aria-hidden="true"></i></span>
@@ -83,6 +83,7 @@
           <li>Amount</li>
           <li>Actions</li>
         </ul>
+        <section id="myTable">
         <ul>
           <li>09-08-2020</li>
           <li>000027</li>
@@ -125,6 +126,7 @@
           <li>&#8358; 50,000,000</li>
           <li><a href="#">View <i class="fa fa-angle-down"></i></a></li>
         </ul>
+        </section>
       </div>
       </section>
 
@@ -140,19 +142,20 @@
     <ul class="col-lg">
       <li>Explore</a></li>
       <li><a href="about.html">About InvoiceIt</a></li>
-      <li><a href="#">Browse Templates</a></li>
+      <li><a href="./sendInvoice.html">Browse Templates</a></li>
       <li><a href="#">Help</a></li>
     </ul>
     <ul class="col-lg">
       <li>Legal</li>
       <li><a href="#">Privacy Policy</a></li>
-      <li><a href="#">Terms of Use</a></li>
-      <li><a href="#">Cookie Policy</a></li>
+      <li><a href="./pricing_page.html">Pricing</a></li>
+      <li><a href="./faq.html">FAQ</a></li>
+      <li><a href="./guide.html">Guide</a></li>
     </ul>
     <div class="col-lg">
       <ul>
         <li>Contact</li>
-        <li><a href="#">support@invoiceit.io</a></li>
+        <li><a href="./contact-support.html">support@invoiceit.io</a></li>
       </ul>
       <section>
         <a href="#"><i class="fa fa-instagram"></i></a>
@@ -177,6 +180,16 @@
       document.getElementById("mySidenav").style.width = "0";
     }
     </script>
+    <script>
+      $(document).ready(function(){
+        $("#myInput").on("keyup", function() {
+          var value = $(this).val().toLowerCase();
+          $("#myTable li").filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+          });
+        });
+      });
+      </script>
          
 </body>
 </html>

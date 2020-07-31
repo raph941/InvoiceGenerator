@@ -7,7 +7,7 @@ def invoiceCreationView(request):
     invoice_number = len(InvoiceModel.objects.all()) + 1
     str_in = str(invoice_number)
     inv_num = str_in.zfill(6)
-
+    
     context = {
         'invoice_number': inv_num,
     }

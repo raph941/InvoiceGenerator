@@ -6,12 +6,12 @@
   overflow-x: hidden;
 }
 
-button:hover {
-  background: #06c7b4;
+.btn:hover {
+  background-color: #06c7b4 !important;
 }
 
-button:focus {
-  background: #2c988e;
+.btn:focus {
+  background: #2c988e !important;
 }
 
 h1 {

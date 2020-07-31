@@ -140,3 +140,22 @@ function updateTotal() {
     taxElement.innerHTML = parseFloat(tax).toFixed(2)
     totalElement.innerHTML = total + (total * 0.10)
 }
+
+
+// js pdf
+var doc = new jsPDF();
+var elementHTML = $('#content').html();
+var specialElementHandlers = {
+    '#elementH': function (element, renderer) {
+        return true;
+    }
+};
+doc.fromHTML(elementHTML, 15, 15, {
+    'width': 170,
+    'elementHandlers': specialElementHandlers
+});
+
+// Save the PDF
+function savePdf() {
+    doc.save('sample-document.pdf');
+}

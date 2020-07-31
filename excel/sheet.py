@@ -1,5 +1,6 @@
-from openpyxl import Workbook
-workbook = Workbook()
+from openpyxl import load_workbook
+filename = "invoice.xlsx"
+workbook = load_workbook(filename)
 sheet = workbook.active
 #the prefilled data is to give you an idea of the user data needed, you should replace them with data gotten from a user
 def user_invoice():

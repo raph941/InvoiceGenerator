@@ -62,5 +62,6 @@ def user_invoice():
                     continue
                 else:
                     sheet[itemposition] = item[key]
+    first_item_row+=1
     workbook.save(filename="invoice.xlsx")
 user_invoice()

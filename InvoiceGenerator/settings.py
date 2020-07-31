@@ -14,6 +14,7 @@ import os
 import dj_database_url
 from decouple import config, Csv
 from django.contrib.messages import constants as messages
+from django.core.mail import send_mail
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -43,8 +44,10 @@ INSTALLED_APPS = [
     
     # project Apps
     'accounts',
-    'InvoiceGenerator'
+    'invoiceApp'
 ]
+
+
 
 MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
@@ -98,17 +101,8 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
-    },
-    {
         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-    },
+    }
 ]
 
 
@@ -141,10 +135,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 #to redirect our login to homepage
-LOGIN_REDIRECT_URL = '/signup'
+LOGIN_REDIRECT_URL = '/'
 #to redirect our logout to the login page
-#LOGOUT_REDIRECT_URL = 'home'
-#LOGIN_URL = 'login'
+LOGOUT_REDIRECT_URL = '/'
+LOGIN_URL = '/login'
 
 # message tags
 MESSAGE_TAGS = {
@@ -154,3 +148,11 @@ MESSAGE_TAGS = {
     messages.WARNING: 'alert-warning',
     messages.ERROR: 'alert-danger',
 }
+
+# SMTP CONFIGURATION
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST_USER = '***@**.com'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_PASSWORD = '*****'

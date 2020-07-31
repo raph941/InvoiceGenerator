@@ -6,11 +6,16 @@ body {
     text-decoration: none;
     color: inherit;
   }
+
+  a:hover {
+      text-decoration: none;
+      color: #06C7B4;
+  }
   
   .main-cont {
     display: grid;
     grid-template-rows: 85px auto;
-    height: 100vh;
+    height: 100%;
   }
   
   
@@ -114,11 +119,11 @@ body {
     font-size: 18px;
     align-self: center;
     color: #ffffff;
-    background-color: #07E0CB;
-    
+    background-color: #06C7B4;
+    border: none;
   }
   .contact-form-btn:hover {
-    background-color: #06C7B4;
+    background-color: #07E0CB;
     cursor: pointer;
     
   }

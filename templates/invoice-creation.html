@@ -18,6 +18,7 @@
         <div class="container mt-5 pt-5 mb-5">
             <form>
                 <!--Top Links-->
+                <button id="data-store" class="d-none" url-href="{% url 'create_invoice' %}"></button>
                 <div class="invoiceCreation__buttons d-flex justify-content-between">
                     <div>
                         <a href="{% url 'invoice_preview' %}" class="btn btn-actions"> <i class="fas fa-print mr-1"></i> Print</a>
@@ -45,7 +46,7 @@
 
                     <div class=" col-12  col-lg-5 invoiceName__container  text-right">
                         <input type="text" class="ml-auto d-block" id="invoiceName" aria-describedby="invoiceName"
-                            placeholder="Invoice" disabled>
+                            placeholder="Invoice">
                         <input type="text" class="mt-2   " id="invoiceNumber" aria-describedby="invoiceNumber"
                             placeholder="Invoice#" value="{{ invoice_number }}" disabled>
                     </div>
@@ -236,4 +237,5 @@
 {% endblock content %}
 {% block page_script %}
     <script src="{% static 'js/invoiceCreation.js' %}"></script>
+    <script src="{% static 'js/invoice-creation-ajax.js' %}"></script>
 {% endblock page_script %}

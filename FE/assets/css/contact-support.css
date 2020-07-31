@@ -138,9 +138,14 @@ body {
       margin: 0 10px;
     }
     .hero-img {
-      width: 100%;
+      width: 60%;
     }
     .inpt, .txt-area {
       margin: 10px 0 40px 0;
     }
+
+    .content>h4 {
+        font-weight: 700;
+        font-size: 1.2rem;
+      }
   }

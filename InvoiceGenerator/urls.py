@@ -18,11 +18,23 @@ from django.urls import path, include
 from django.conf.urls import url
 from accounts import views as account_views
 from invoiceApp import views as invoice_views
+<<<<<<< HEAD
 from django.contrib.auth import views as auth_views
+=======
+from . import views
+>>>>>>> 7f6c4f8b47ad16b57426feb9102ca82b30d95f37
 
 
 urlpatterns = [
-    url(r'^$', invoice_views.home, name='home'),
+    url(r'^$', views.home, name='home'),
+    url(r"about/$", views.aboutView, name="about"),
+    url(r"faq/$", views.faqView, name="faq"),
+    url(r"contact/$", views.contactView, name="contact"),
+    url(r"pricing/$", views.pricingView, name="pricing"),
+    url(r"user-statistic/$", views.userStatisticsView, name="statistics"),
+    url(r"guide/$", views.invoiceGuideView, name="giude"),
+    url(r"dashboard/$", views.dashboardView, name="contact"),
+
     url('invoice/', include('invoiceApp.urls')),
 
     path('reset_password/', auth_views.PasswordResetView.as_view(template_name='registration/reset_password.html'), name='reset_password'),

@@ -2,6 +2,12 @@ body {
   font-family: "Roboto", sans-serif !important;
   font-size: 16px;
 }
+a{
+  text-decoration: none !important;
+}
+a:hover{
+  text-decoration: none !important;
+}
 
 header nav {
   padding: 20px 0 !important;
@@ -53,7 +59,7 @@ header nav ul .sign__up:hover a {
 }
 
 footer {
-  color: #e5fdf8;
+  color: #e5fdf8 !important;
   font-size: 16px;
   font-weight: 300;
   line-height: 2;
@@ -89,8 +95,12 @@ footer ul li:nth-child(1) {
 footer i {
   margin: 0 10px;
   font-size: 25px !important;
+  color: #e5fdf8 !important;
 }
 
+footer small{
+  color: #e5fdf8 !important;
+}
 footer .trademark {
   border-top: 1px solid rgba(122, 122, 122, 0.5);
 }

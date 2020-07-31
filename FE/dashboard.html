@@ -24,22 +24,27 @@
   <span class="display px-3 pt-3" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
   <main class="d-flex">
     <div id="mySidenav" class="sidenav text-center">
-      <a class="display" href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a style="font-size: 40px;" class="display" href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
       <a href="./index.html"><img class="mb-4" src="./assets/images/logo.svg"></a>
-      <div class="invoices__button">
+      <a href="./invoiceCreation/invoiceCreation.html"><div class="invoices__button my-3">
         <img src="./assets/images/invoices.svg">
         <label class="m-0">Invoices</label>
-      </div>
-      <div>
-        <img >
-      </div>
+      </div></a>
+      <a href="./usersStatistics.html"><div class="invoices__button my-3">
+        <i class="fas fa-chart-bar"></i>
+        <label class="m-0">	&#128202;Statistics</label>
+      </div></a>
+      <a href="invoice-settings.html"><div class="settings position-absolute">
+        <i class="fa fa-cog"></i>
+        <label class="m-0">Settings</label>
+      </div></a>
     </div>
     
     <div class="w-100 p-4">
       <div class="header__text navbar">
         <h1>Invoices</h1>
         <div>
-          <button><a href="./invoiceCreation.html">Create an invoice</a></button>
+          <button><a href="./invoiceCreation/invoiceCreation.html">Create an invoice</a></button>
           <img src="./assets/images/hero-image.svg">
         </div>
       </div>

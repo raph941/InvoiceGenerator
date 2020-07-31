@@ -9,29 +9,32 @@
   left: 0;
   overflow-x: hidden;
   transition: 0.5s;
+  position: relative;
   padding: 3rem 0;
 }
 
 .sidenav a {
   text-decoration: none;
-  font-size: 40px;
-  color: #818181;
-  transition: 0.3s;
-  text-align: right;
-  padding-right: 30px;
+  color: black;
+  cursor: pointer;
 }
 
 .sidenav a:hover {
   color: #152724;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .sidenav .closebtn {
   position: absolute;
   top: 0;
   right: 25px;
-  font-size: 36px;
   margin-left: 50px;
+  font-size: 40px;
+  color: #818181;
+  transition: 0.3s;
+  text-align: right;
+  padding-right: 30px;
 }
 .display{
   display: none;
@@ -49,6 +52,9 @@ h1{
   padding: .5rem;
   color: #152724;
   border: 2px solid transparent;
+}
+.invoices__button{
+  border-radius: 0;
 }
 
 .header__text button:hover,.invoices__button:hover {
@@ -79,6 +85,16 @@ button a:hover,button:hover{
   color: #000000;
   mix-blend-mode: normal;
   opacity: 0.4;
+}
+.settings{
+  bottom: 1rem;
+  /* position: absolute; */
+  /* top: 50%; */
+  left: 50%;
+  margin-right: -50%;
+  font-size: 20px;
+  transform: translate(-50%, -50%);
+  margin: 0;
 }
 
 /* Forms */
@@ -160,7 +176,7 @@ input:focus,select:focus{
   }
   .sidenav {
     width: 0;
-    position: fixed;
+    position: absolute;
     padding: 1.3rem 0;
   }
   .display{

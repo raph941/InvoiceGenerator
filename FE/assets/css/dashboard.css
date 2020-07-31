@@ -152,10 +152,7 @@ input:focus,select:focus{
   .display{
     display: block;
   }
-  /* Table */
-  .table{
-    font-size: small;
-  }
+ 
 
 }
 
@@ -166,7 +163,7 @@ input:focus,select:focus{
     overflow-x: scroll;
   }
   .table{
-    /* font-size: small; */
+    font-size: small;
     /* flex-wrap: nowrap; */
     width: 136% !important;
   }

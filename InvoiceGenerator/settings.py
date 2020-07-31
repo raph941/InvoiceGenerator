@@ -141,9 +141,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 #to redirect our login to homepage
-LOGIN_REDIRECT_URL = '/signup'
+LOGIN_REDIRECT_URL = '/'
 #to redirect our logout to the login page
-#LOGOUT_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = '/'
 LOGIN_URL = '/login'
 
 # message tags

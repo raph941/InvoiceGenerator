@@ -18,11 +18,8 @@ from django.urls import path, include
 from django.conf.urls import url
 from accounts import views as account_views
 from invoiceApp import views as invoice_views
-<<<<<<< HEAD
 from django.contrib.auth import views as auth_views
-=======
 from . import views
->>>>>>> 7f6c4f8b47ad16b57426feb9102ca82b30d95f37
 
 
 urlpatterns = [
@@ -33,6 +30,7 @@ urlpatterns = [
     url(r"pricing/$", views.pricingView, name="pricing"),
     url(r"user-statistic/$", views.userStatisticsView, name="statistics"),
     url(r"guide/$", views.invoiceGuideView, name="giude"),
+    url(r"privacy/$", views.privacyPolicyView, name="privacy"),
     url(r"dashboard/$", views.dashboardView, name="contact"),
 
     url('invoice/', include('invoiceApp.urls')),

@@ -62,4 +62,4 @@ def user_invoice(theinvoicedate,theduedate,thecompany_name,thecompany_address,th
             print(itemposition)
             sheet[itemposition]=item[key]
             count+=1
-    workbook.save(filename="static/invoice.xlsx")
+    workbook.save(filename="invoice.xlsx")

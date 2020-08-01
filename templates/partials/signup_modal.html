@@ -4,6 +4,7 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-body">
+                <div class="alert__wrapper"></div>
                 <h4 class="text-center">Sign up</h4>
                 <form id="sigupform" csrf="{{ csrf_token }}" method="POST">
                     {% csrf_token %}
@@ -44,7 +45,7 @@
 
                         </div>
                         <div class="float-right">
-                            <p>Already have an account? <a href="{% url 'login' %}">Sign In</a></p>
+                            <p>Already have an account? <a class="login_btn" href="" style="color:#07EDD6;">Sign In</a></p>
                         </div>
                     </div>
                     

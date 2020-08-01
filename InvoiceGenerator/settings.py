@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     
     # project Apps
     'accounts',
-    'invoiceApp',
+    'invoiceApp'
 ]
 
 
@@ -148,7 +148,6 @@ MESSAGE_TAGS = {
     messages.WARNING: 'alert-warning',
     messages.ERROR: 'alert-danger',
 }
-
 
 # SMTP CONFIGURATION
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'

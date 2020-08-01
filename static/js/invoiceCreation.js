@@ -8,9 +8,8 @@ if (document.readyState == 'loading') {
 function ready() {
     let rateRegister = document.getElementById('rateInput')
     let quantityRegister = document.getElementById('quantityInput')
-    let priceInput = document.getElementById('priceInput')
-    let tableButton = document.getElementsByClassName('table__button')[0]
-    let rowsContainer = document.getElementById('rowsContainer')[0]
+     let tableButton = document.getElementsByClassName('table__button')[0]
+     let fileImageInput  = document.getElementById('file-input')
 
 
     rateRegister.addEventListener('keyup', function () {
@@ -36,9 +35,6 @@ function ready() {
 
         taxes.innerHTML = ((rowsSum + priceUser) * 0.10).toFixed(2)
         total.innerHTML = (((rowsSum + priceUser) * 0.10) + rowsSum + priceUser).toFixed(2)
-
-
-
     })
 
 
@@ -47,9 +43,8 @@ function ready() {
         let price = document.getElementById('priceInput')
         let rate = document.getElementById('rateInput').value
         price.value = quantity * rate
-        let rowsSum =  0 
+        let rowsSum = 0
         let priceUser = parseFloat(price.value)
-
         let rows = document.getElementsByClassName('table__info')
 
         for (let i = 0; i < rows.length; i++) {
@@ -62,7 +57,6 @@ function ready() {
 
         taxes.innerHTML = ((rowsSum + priceUser) * 0.10).toFixed(2)
         total.innerHTML = (((rowsSum + priceUser) * 0.10) + rowsSum + priceUser).toFixed(2)
-
     })
 
 
@@ -76,7 +70,6 @@ function ready() {
         let quantity = document.getElementById('quantityInput').value
         let price = document.getElementById('priceInput').value
         let needsValidation = document.getElementsByClassName('needs__validation')[0]
-
 
         if (identity.value == "") {
             identity.classList.add('field__invalid')
@@ -118,10 +111,17 @@ function ready() {
         }
     })
 
+
+    fileImageInput.addEventListener('change', function() {
+        logoImageInput = document.getElementsByClassName('logo__image')[0]
+         logoImageInput.src = (window.URL ? URL : webkitURL).createObjectURL(event.target.files[0])
+    })
+    
+
     addEventListenerButton()
-
-
     validate()
+
+
 }
 
 
@@ -179,4 +179,3 @@ function updateTotal() {
     taxElement.innerHTML = parseFloat(tax).toFixed(2)
     totalElement.innerHTML = total + (total * 0.10)
 }
-

@@ -36,7 +36,7 @@
 
                 <div class=" row d-flex justify-content-between mt-5">
                     <div class="col-12 col-lg-7 text-center text-md-left">
-                        <img src="{% static 'images/200x100.png' %}" alt="">
+                        <img class="logo__image" src="{% static 'images/200x100.png' %}" alt="Logo">
                         <div class="image-upload ml-2">
                             <label for="file-input">
                                 <img src="{% static 'images/addIcon.png' %}" />
@@ -48,7 +48,8 @@
                     <div class=" col-12  col-lg-5 invoiceName__container  text-right">
                         <input type="text" class="ml-auto d-block" id="invoiceName" aria-describedby="invoiceName"
                             placeholder="Invoice">
-                        <input type="text" class="mt-2   " id="invoiceNumber" aria-describedby="invoiceNumber"
+                        
+                        <input type="text" class="mt-2" id="invoiceNumber" aria-describedby="invoiceNumber"
                             placeholder="Invoice#" value="{{ invoice_number }}" disabled>
                     </div>
                 </div>

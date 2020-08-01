@@ -26,27 +26,22 @@ def AjaxloginView(request):
 
 
 # Create your views here.
-def SignupView(request):
-    form = SignupForm(request.POST)
-    if request.method == 'POST':
-        if form.is_valid():
-            user = form.save()
-            user.refresh_from_db()
-            user.is_regular = True
-            user.save()
-        
-            return redirect('login')
-        else:
-            form = SignupForm()
-            
-            #to vary the message to be shown to the user based on the nature of validationerror they make
-            mail = request.POST['email']
-            password1 = request.POST['password1']
-            password2 = request.POST['password2']
-
-            if User.objects.filter(email=mail).exists():
-                messages.error(request, "A user with thesame Email already exists")
-            if password1 and password1 != password2:
-                messages.error(request, "passwords did not match")
-
-    return render(request, 'registration/signup.html', {'form': form})
+def SignupAjaxView(request):
+	if request.method == 'POST':
+		fname = request.POST.get('first_name')
+		lname = request.POST.get('last_name')
+		email = request.POST.get('email')
+		password1 = request.POST.get('password1')
+		password2 = request.POST.get('password2')
+		data = {'first_name':fname, 'last_name':lname, 'email':email, 'password2':password2, 'password1':password1}
+		form = SignUpForm(data = data)
+		if form.is_valid():
+			user = form.save(commit=False)
+			user.is_active = True
+			user.save()
+			return HttpResponse(json.dumps({"message": "Success"}),content_type="application/json")
+		else:
+			return HttpResponse(json.dumps({"message":form.errors}),content_type="application/json")
+	else:
+		form = SignUpForm()
+	return HttpResponse(json.dumps({"message": "Denied"}),content_type="application/json")

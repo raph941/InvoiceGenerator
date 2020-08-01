@@ -33,6 +33,8 @@ urlpatterns = [
     url(r"guide/$", views.invoiceGuideView, name="giude"),
     url(r"privacy/$", views.privacyPolicyView, name="privacy"),
     url(r"dashboard/$", views.dashboardView, name="contact"),
+    url(r"error/$", views.errorView, name="error"),
+    url(r"contact-support/$", views.contactSupportView, name="contactSupport"),
 
     url('invoice/', include('invoiceApp.urls')),
 
@@ -42,7 +44,7 @@ urlpatterns = [
     path('reset_password_complete/', auth_views.PasswordResetCompleteView.as_view(template_name='registration/password_reset_done.html'), name='password_reset_complete'),
 
     #authentication urls
-    url(r"signup/$", account_views.SignupView, name="signup"),
+    url(r"signup/$", account_views.SignupAjaxView, name="signup"),
     url(r"ajax_login/$", account_views.AjaxloginView, name="ajax_login"),
     url('^', include('django.contrib.auth.urls')),
 

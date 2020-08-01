@@ -1,3 +1,15 @@
+var user = $('#data-store').attr('user');
+var auth = "False"
+if (user == "AnonymousUser"){
+    $('#data-store').attr( "auth", "False" );
+    auth = "False"
+}
+else{
+    $('#data-store').attr( "auth", "True" );
+    auth = "True"
+}
+
+
 //Login
 $('#login_btn').click(function(e){
     e.preventDefault()
@@ -25,11 +37,19 @@ $('#loginform').submit(function(e){
                 $('.alert__wrapper').html(
                     '<div class="alert alert-danger alert-custom alert-dismissible fade show" role="alert">Incorrect Email/Password, try again<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>'
                 );
+                $('#data-store').attr( "auth", "False" );
+                auth = "False"
             }
             else{
                 $('#loginModal').modal('hide')
                 $('.header__link').hide()
                 $('.header__link2').show()
+                $('#data-store').attr('user')
+                $('#data-store').attr( "auth", "True" );
+                $('.general-alerts').html(
+                    '<div class="alert alert-success alert-dismissible fade show" role="alert">Login Successful<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>'
+                );
+                auth = "True"
             }
         }
     })
@@ -42,15 +62,16 @@ $('#signup_btn').click(function(e){
 })
 
 
-// $('#downloadBtn').click(function(e){
-//     e.preventDefault()
-//     let user = $('#data-store').attr('user')
-//     console.log(user)
-//     if (user == "AnonymousUser"){
-//         $('#loginModal').modal('show')
-//     }
-//     else(
-//         console.log('submit'),
-//         $('#invoice-form').trigger( "submit" )
-//     )
-// })
+
+$('.downloadBtn').click(function(e){
+    if (auth == "False"){
+        e.preventDefault()
+        $('#loginModal').modal('show')
+    }
+})
+
+
+
+// console.log('submit');
+    // let theForm = document.querySelector('#invoice-form');
+    // theForm.submit()

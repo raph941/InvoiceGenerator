@@ -42,5 +42,15 @@ $('#signup_btn').click(function(e){
 })
 
 
-
-    
+// $('#downloadBtn').click(function(e){
+//     e.preventDefault()
+//     let user = $('#data-store').attr('user')
+//     console.log(user)
+//     if (user == "AnonymousUser"){
+//         $('#loginModal').modal('show')
+//     }
+//     else(
+//         console.log('submit'),
+//         $('#invoice-form').trigger( "submit" )
+//     )
+// })

@@ -61,6 +61,47 @@ $('#signup_btn').click(function(e){
     $('#signupModal').modal('show')
 })
 
+$('#signupform').submit(function(e){
+    e.preventDefault()
+    var first_name     = $('#id_first_name').val()
+    var last_name  = $('#id_last_name').val()
+    var email  = $('#id_email').val()
+    var password1  = $('#id_password1').val()
+    var password2  = $('#id_password2').val()
+    var csrf  = $('#signupform').attr('csrf')
+
+    $.ajax({
+        url: window.location.host + "/signup/",
+        method: "POST",
+        data: {
+            'csrfmiddlewaretoken': csrf,
+            'first_name': first_name,
+            'last_name': last_name,
+            "email":email,
+            "password1":password1,
+            'password2': password2
+        },
+        
+        success: function(data){
+            console.log(data)
+            if (data.message == "Success") {
+                $('#signupModal').modal('hide')
+                $('#loginModal').modal('show')
+                $('#data-store').attr( "auth", "True" );
+                $('.general-alerts').html(
+                    '<div class="alert alert-success alert-dismissible fade show" role="alert">Signup Successful<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>'
+                );
+            }
+            else{
+                $('.alert__wrapper').html(
+                    '<div class="alert alert-danger alert-custom alert-dismissible fade show" role="alert">' + data.message +'<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>'
+                );
+            }
+        }
+    })
+})
+
+
 
 
 $('.downloadBtn').click(function(e){

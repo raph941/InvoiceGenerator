@@ -18,7 +18,7 @@
         <div class="container mt-5 pt-5 mb-5">
             <form id="invoice-form">
                 <!--Top Links-->
-                <button id="data-store" user="{{request.user}}" class="d-none" url-href="{% url 'create_invoice' %}"></button>
+                <button type="submit" id="data-store" user="{{request.user}}" class="d-none" url-href="{% url 'create_invoice' %}"></button>
                 <div class="invoiceCreation__buttons d-flex justify-content-between">
                     <div>
                         <a id="print_btn" href="#" class="btn btn-actions"> <i class="fas fa-print mr-1"></i> Print</a>
@@ -245,6 +245,6 @@
     <script src="{% static 'js/jspdf-autotable.js' %}"></script>
     <script src="{% static 'js/template_generation.js' %}"></script>
     <script>
-    
+
     </script>
 {% endblock page_script %}

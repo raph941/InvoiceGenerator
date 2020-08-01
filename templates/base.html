@@ -25,7 +25,7 @@
 
 </head>
 <body>
-  <header id="header" class="mb-5 pb-5 container">
+  <header id="header" class=" container">
     <nav class="navbar w-100">
       <a href="{% url 'home' %}">
         <img class="logo__img" src="{% static 'images/logo.svg' %}">
@@ -41,6 +41,7 @@
       </ul>
     </nav>
   </header>
+  <div class="container general-alerts"></div>
   {% include "partials/login_modal.html" %}
   {% include "partials/signup_modal.html" %}
   <!-- Enter your text here -->

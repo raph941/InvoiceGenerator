@@ -109,6 +109,21 @@ input[type="date"]::-webkit-inner-spin-button,
 input[type="date"]::-webkit-calendar-picker-indicator {
   color: #757575;
 }
+
+/*Hide arrow input[number]*/
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/*Hide arrow input[number] mozilla specially*/
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 .table__hr {
   background-color: #2c988e;
   height: 1px;

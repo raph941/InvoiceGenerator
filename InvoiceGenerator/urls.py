@@ -33,6 +33,8 @@ urlpatterns = [
     url(r"guide/$", views.invoiceGuideView, name="giude"),
     url(r"privacy/$", views.privacyPolicyView, name="privacy"),
     url(r"dashboard/$", views.dashboardView, name="contact"),
+    url(r"error/$", views.errorView, name="error"),
+    url(r"contact-support/$", views.contactSupportView, name="contactSupport"),
 
     url('invoice/', include('invoiceApp.urls')),
 

@@ -3,8 +3,26 @@ from django.contrib.auth import views as auth_views
 from accounts.forms import SignupForm
 from django.contrib import messages
 from django.shortcuts import get_object_or_404, redirect, render
+from django.contrib.auth import authenticate, login
+from django.http import HttpResponse, HttpResponseRedirect
+import json
 
 from accounts.models import User
+
+
+def AjaxloginView(request):
+    email= request.POST.get('email')
+    password = request.POST.get('password')
+    user = authenticate(email=email, password=password)
+    if user is not None:
+        if user.is_active:
+            login(request, user)
+            return HttpResponse(json.dumps({"message": "Success"}),content_type="application/json")
+        else:
+            return HttpResponse(json.dumps({"message": "inactive"}), content_type="application/json")
+    else:
+        return HttpResponse(json.dumps({"message": "invalid"}),content_type="application/json")
+    return HttpResponse(json.dumps({"message": "denied"}),content_type="application/json")
 
 
 # Create your views here.

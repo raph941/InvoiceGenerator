@@ -12,7 +12,6 @@ def invoiceCreationView(request):
         'invoice_number': inv_num,
     }
 
-    
     print(context)
 
     return render(request, 'invoice-creation.html', context)
@@ -24,6 +23,7 @@ def invoicePreviewView(request):
 
 def faqView(request):
     return render(request, 'faq.html')
+
 
 def contactView(request):
     return render(request, 'contact.html')

@@ -19,6 +19,7 @@ from django.conf.urls import url
 from accounts import views as account_views
 from invoiceApp import views as invoice_views
 from django.contrib.auth import views as auth_views
+from accounts import views as account_views
 from . import views
 
 
@@ -39,11 +40,10 @@ urlpatterns = [
     path('reset_password_sent/', auth_views.PasswordResetDoneView.as_view(template_name='registration/reset_password_sent.html'), name='password_reset_done'),
     path('reset/<uidb64>/<token>/', auth_views.PasswordResetConfirmView.as_view(template_name='registration/password_reset_form.html'), name='password_reset_confirm'),
     path('reset_password_complete/', auth_views.PasswordResetCompleteView.as_view(template_name='registration/password_reset_done.html'), name='password_reset_complete'),
-    # path('', include('django.contrib.auth.urls')),
-
 
     #authentication urls
     url(r"signup/$", account_views.SignupView, name="signup"),
+    url(r"ajax_login/$", account_views.AjaxloginView, name="ajax_login"),
     url('^', include('django.contrib.auth.urls')),
 
     path('admin/', admin.site.urls),

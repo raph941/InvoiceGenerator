@@ -41,8 +41,6 @@ let collectData = function(){
     var clientAddress  = $('#clientAddress').val()
     var clientCity  = $('#clientCity').val()
     var clientCountry  = $('#clientCountry').val()
-
-    
     
 }
 

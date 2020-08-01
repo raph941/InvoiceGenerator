@@ -69,10 +69,9 @@ $('#signupform').submit(function(e){
     var password1  = $('#id_password1').val()
     var password2  = $('#id_password2').val()
     var csrf  = $('#signupform').attr('csrf')
-    console.log(csrf)
 
     $.ajax({
-        url: window.location.host + "/signup/",
+        url: window.location.host + "/ajax_signup/",
         method: "POST",
         data: {
             'csrfmiddlewaretoken': csrf,

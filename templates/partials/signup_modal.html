@@ -5,7 +5,8 @@
         <div class="modal-content">
             <div class="modal-body">
                 <h4 class="text-center">Sign up</h4>
-                <form id="sigupform" csrf="{{ csrf_token }}" method="POST" enctype="multipart/form-data">
+                <form id="sigupform" csrf="{{ csrf_token }}" method="POST">
+                    {% csrf_token %}
                     <div class="form-group">
                         <label for="firt_name">First Name</label>
                         <input id="id_first_name" class="form-control" type="text" name="first_name" placeholder="John">

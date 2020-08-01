@@ -33,3 +33,9 @@ def aboutView(request):
 
 def privacyPolicyView(request):
     return render(request, 'privacy-policy.html')
+
+def errorView(request):
+    return render(request, '404.html')
+
+def contactSupportView(request):
+    return render(request, 'contact-support.html')

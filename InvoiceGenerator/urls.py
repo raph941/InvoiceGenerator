@@ -44,7 +44,7 @@ urlpatterns = [
     path('reset_password_complete/', auth_views.PasswordResetCompleteView.as_view(template_name='registration/password_reset_done.html'), name='password_reset_complete'),
 
     #authentication urls
-    url(r"signup/$", account_views.SignupAjaxView, name="signup"),
+    url(r"ajax_signup/$", account_views.SignupAjaxView, name="ajax_signup"),
     url(r"ajax_login/$", account_views.AjaxloginView, name="ajax_login"),
     url('^', include('django.contrib.auth.urls')),
 

@@ -11,8 +11,9 @@ else{
 
 
 //Login
-$('#login_btn').click(function(e){
+$('#login_btn, .login_btn').click(function(e){
     e.preventDefault()
+    $('#signupModal').modal('hide')
     $('#loginModal').modal('show')
 })
 
@@ -56,23 +57,23 @@ $('#loginform').submit(function(e){
 })
 
 // Signup
-$('#signup_btn').click(function(e){
+$('#signup_btn, .signup_btn').click(function(e){
     e.preventDefault()
+    $('#loginModal').modal('hide')
     $('#signupModal').modal('show')
 })
 
-$('#signupform').submit(function(e){
+$('#sigupform').submit(function(e){
     e.preventDefault()
     var first_name     = $('#id_first_name').val()
     var last_name  = $('#id_last_name').val()
     var email  = $('#id_email').val()
     var password1  = $('#id_password1').val()
     var password2  = $('#id_password2').val()
-    var csrf  = $('#signupform').attr('csrf')
-    console.log(csrf)
+    var csrf  = $('#sigupform').attr('csrf')
 
     $.ajax({
-        url: window.location.host + "/signup/",
+        url: window.location.host + "/ajax_signup/",
         method: "POST",
         data: {
             'csrfmiddlewaretoken': csrf,
@@ -84,7 +85,7 @@ $('#signupform').submit(function(e){
         },
         
         success: function(data){
-            console.log(data)
+            console.log(data.message)
             if (data.message == "Success") {
                 $('#signupModal').modal('hide')
                 $('#loginModal').modal('show')

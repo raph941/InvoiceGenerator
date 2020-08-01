@@ -21,13 +21,13 @@
                 <button id="data-store" user="request.user" class="d-none" url-href="{% url 'create_invoice' %}"></button>
                 <div class="invoiceCreation__buttons d-flex justify-content-between">
                     <div>
-                        <a id="print_btn" href="{% url 'invoice_preview' %}" class="btn btn-actions"> <i class="fas fa-print mr-1"></i> Print</a>
+                        <a id="print_btn" href="#" class="btn btn-actions"> <i class="fas fa-print mr-1"></i> Print</a>
                         <button class="btn btn-actions"> <i class="far fa-file-pdf mr-1"></i> 
-                            <a id="pdf_btn" class="ancor__link" href=" {% url 'invoice_preview' %}">PDF </a>
+                            <a id="pdf_btn" class="ancor__link" href="#">PDF </a>
                         </button>
                     </div>
 
-                    <a class="btn btn-send" href="{% url 'invoice_preview' %}" >Preview</a>
+                    <a class="btn btn-send" href="#" >Save</a>
                     
                 </div>
                 <!--Top Links-->
@@ -239,8 +239,6 @@
 {% endblock content %}
 {% block page_script %}
     <script src="{% static 'js/invoiceCreation.js' %}"></script>
-    <script src="{% static 'js/invoice-creation-ajax.js' %}"></script>
-
     <script src="{% static 'js/jspdf.debug.js' %}"></script>
     <script>
     if (window.define) delete window.define.amd;

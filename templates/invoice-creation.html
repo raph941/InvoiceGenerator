@@ -240,4 +240,11 @@
 {% block page_script %}
     <script src="{% static 'js/invoiceCreation.js' %}"></script>
     <script src="{% static 'js/invoice-creation-ajax.js' %}"></script>
+
+    <script src="{% static 'js/jspdf.debug.js' %}"></script>
+    <script>
+    if (window.define) delete window.define.amd;
+    </script>
+    <script src="{% static 'js/jspdf-autotable.js' %}"></script>
+    <script src="{% static 'js/template_generation.js' %}"></script>
 {% endblock page_script %}

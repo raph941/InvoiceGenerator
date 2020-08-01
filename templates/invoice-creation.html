@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block title %}
-    <title>InvoiceIt - FAQ</title>
+    <title>InvoiceIt - Create Invoice</title>
 {% endblock title %}
 {% block page_style %}
     <link rel="stylesheet" href="{% static 'css/invoiceCreation.css' %}">
@@ -27,7 +27,8 @@
                         </button>
                     </div>
 
-                    <button id="preview_btn" type="submit" class=" btn btn-send"> <a class="ancor__link" href=" {% url 'invoice_preview' %}">Preview/Send</a></button>
+                    <a class="btn btn-send" href="{% url 'invoice_preview' %}" >Preview</a>
+                    
                 </div>
                 <!--Top Links-->
 

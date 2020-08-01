@@ -17,6 +17,24 @@
     <div class="container">
         <div class="align-items-center mt-5">
            <div class="col-md-5 offset-md-1 signinform mt-5 pl-5 pr-5 pt-4 pb-4">
+
+                {% comment %} messages {% endcomment %}
+                {% for message in messages %}
+                <div class="alert {{ message.tags }} alert-dismissible" role="alert" style="
+                    border-bottom-width: 0px;
+                    border-left-width: 0px;
+                    border-right-width: 0px;
+                    border-top-width: 0px;
+                    height: 65px;
+                    padding: 10px;
+                    padding-top: 15px;">
+                    
+                    {{ message }}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                {% endfor %}
+                {% comment %} end of messages {% endcomment %}
+
                 <h4 class="text-center">Sign up</h4>
                 <form id="loginform" method="POST" enctype="multipart/form-data">
                 {% csrf_token %}

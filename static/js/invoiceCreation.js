@@ -8,15 +8,37 @@ if (document.readyState == 'loading') {
 function ready() {
     let rateRegister = document.getElementById('rateInput')
     let quantityRegister = document.getElementById('quantityInput')
+    let priceInput = document.getElementById('priceInput')
     let tableButton = document.getElementsByClassName('table__button')[0]
     let rowsContainer = document.getElementById('rowsContainer')[0]
 
 
     rateRegister.addEventListener('keyup', function () {
         let quantity = document.getElementById('quantityInput').value
+        let subTotal = document.getElementById('subTotal')
+        let total = document.getElementById('total')
         let price = document.getElementById('priceInput')
+        let taxes = document.getElementById('taxes')
         let rate = event.target.value
+        let rowsSum = 0
         price.value = quantity * rate
+        let priceUser = parseFloat(price.value)
+
+        let rows = document.getElementsByClassName('table__info')
+
+        for (let i = 0; i < rows.length; i++) {
+            let row = rows[i]
+            let prielement = row.getElementsByClassName('price')[0]
+            rowsSum += parseFloat(prielement.innerHTML)
+        }
+
+        subTotal.innerHTML = priceUser + rowsSum
+
+        taxes.innerHTML = ((rowsSum + priceUser) * 0.10).toFixed(2)
+        total.innerHTML = (((rowsSum + priceUser) * 0.10) + rowsSum + priceUser).toFixed(2)
+
+
+
     })
 
 
@@ -25,7 +47,24 @@ function ready() {
         let price = document.getElementById('priceInput')
         let rate = document.getElementById('rateInput').value
         price.value = quantity * rate
+        let rowsSum =  0 
+        let priceUser = parseFloat(price.value)
+
+        let rows = document.getElementsByClassName('table__info')
+
+        for (let i = 0; i < rows.length; i++) {
+            let row = rows[i]
+            let prielement = row.getElementsByClassName('price')[0]
+            rowsSum += parseFloat(prielement.innerHTML)
+        }
+
+        subTotal.innerHTML = priceUser + rowsSum
+
+        taxes.innerHTML = ((rowsSum + priceUser) * 0.10).toFixed(2)
+        total.innerHTML = (((rowsSum + priceUser) * 0.10) + rowsSum + priceUser).toFixed(2)
+
     })
+
 
 
 
@@ -42,12 +81,12 @@ function ready() {
         if (identity.value == "") {
             identity.classList.add('field__invalid')
             needsValidation.classList.add("invalid-container")
-          
+
             setTimeout(() => {
                 identity.classList.remove('field__invalid')
                 needsValidation.classList.remove("invalid-container")
 
-             }, 1500);
+            }, 1500);
 
         } else {
             let row = `
@@ -140,3 +179,4 @@ function updateTotal() {
     taxElement.innerHTML = parseFloat(tax).toFixed(2)
     totalElement.innerHTML = total + (total * 0.10)
 }
+

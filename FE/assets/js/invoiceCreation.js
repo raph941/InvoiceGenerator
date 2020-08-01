@@ -211,3 +211,47 @@ $('#generate').click(function(){
     generatePDF()
     console.log('clicked')
 })
+
+// save user input as json
+$('#preview').click(function(){
+    var invoiceName = document.getElementById('invoiceName').value;
+    var invoiceNumber = document.getElementById('invoiceNumber').value;
+    var companyName = document.getElementById('companyName').value;
+    var companyAddress = document.getElementById('companyAddress').value;
+    var companyCity = document.getElementById('companyCity').value;
+    var companyCountry =document.getElementById('companyCountry').value;
+    var invoiceDate = document.getElementById('invoiceDate').value;
+    var dueDate = document.getElementById('dueDate').value;
+    var clientName = document.getElementById('clientName').value;
+    var clientAddress = document.getElementById('clientAddress').value;
+    var clientCity = document.getElementById('clientCity').value;
+    var clientCountry = document.getElementById('clientCountry').value;
+    var brandIdentity = document.getElementById('brandIdentity').value;
+    var rateInput = document.getElementById('rateInput').value;
+    var quantityInput = document.getElementById('quantityInput').value;
+    var priceInput = document.getElementById('priceInput').value;
+    var notes = document.getElementById('notes').value;
+    var terms = document.getElementById('terms').value;
+    var userInput = {
+        invoiceName,
+        invoiceNumber,
+        companyName,
+        companyAddress,
+        companyCity,
+        companyCountry,
+        invoiceDate,
+        dueDate,
+        clientName,
+        clientAddress,
+        clientCity,
+        clientCountry,
+        brandIdentity,
+        rateInput,
+        quantityInput,
+        priceInput,
+        notes,
+        terms
+    }
+
+    console.log(userInput);
+})

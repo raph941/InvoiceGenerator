@@ -89,6 +89,7 @@ theForm.addEventListener('submit', function (event) {
         name: values.get("clientName"),
         subTotal: document.querySelector('#subTotal').innerText,
         total: document.querySelector('#total').innerText,
+        taxes: document.querySelector('#taxes').innerText,
         addressClient: `${values.get("clientAddress")}, ${values.get("clientCity")} \n${values.get("clientCountry")}`,
         address: `${values.get("companyAddress")}, ${values.get("companyCity")} \n${values.get("companyCountry")}`,
         phone: '701-273-7854\n701-325-896',
@@ -186,7 +187,7 @@ theForm.addEventListener('submit', function (event) {
 
     var headRow = ['Payements Methods', 'SubTotal', `${data.subTotal}`];
     var footRow = [`      ${data.feedback}`, 'Total', `${data.total}`];
-    var totalRows = [data.paymentMethod, 'Tax Rate', '10%'];
+    var totalRows = [data.paymentMethod, 'Tax Rate (10%)', `${data.taxes}`];
 
     doc.autoTable(
         {
@@ -276,7 +277,7 @@ theForm.addEventListener('submit', function (event) {
 
     formSend.append('invoice_items', listItemSend);
     formSend.append('subtotal', data.subTotal);
-    formSend.append('sales_tax', '10%');
+    formSend.append('sales_tax', data.taxes);
     formSend.append('note', data.feedback);
     formSend.append('terms', data.paymentMethod);
 

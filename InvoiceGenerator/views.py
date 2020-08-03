@@ -27,6 +27,9 @@ def invoiceGuideView(request):
 def dashboardView(request):
     return render(request, 'dashboard.html')
 
+def successView(request):
+    return render(request, 'success.html')
+
 
 def aboutView(request):
     return render(request, 'about.html')

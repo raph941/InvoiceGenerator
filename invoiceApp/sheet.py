@@ -1,17 +1,18 @@
+# Script to generate excel invoice
 from openpyxl import load_workbook
-filename = "static/invoice.xlsx"
-workbook = load_workbook(filename)
-sheet = workbook.active
-#the prefilled data is to give you an idea of the user data needed, you should replace them with data gotten from a user
+
+
+file_name = "static/invoice.xlsx"
+work_book = load_workbook(file_name)
+sheet = work_book.active
+
 def user_invoice(theinvoicedate,theduedate,thecompany_name,thecompany_address,thecompany_city,thecompany_country,theclient_name,theclient_address,theclient_city,theclient_country,theitems,thesub_total,thesales_tax,thenote,theterms):
     invoicedate = theinvoicedate
     duedate = theduedate
-    #company details
     company_name = thecompany_name
     company_address= thecompany_address
     company_city = thecompany_city
     company_country = thecompany_country
-    #client details
     client_name = theclient_name
     client_address = theclient_address
     client_city = theclient_city
@@ -62,4 +63,4 @@ def user_invoice(theinvoicedate,theduedate,thecompany_name,thecompany_address,th
             print(itemposition)
             sheet[itemposition]=item[key]
             count+=1
-    workbook.save(filename="invoice.xlsx")
+    work_book.save(file_name="invoice.xlsx")

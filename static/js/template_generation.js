@@ -260,7 +260,7 @@ theForm.addEventListener('submit', function (event) {
 
     var request = new XMLHttpRequest();
 
-    request.open('POST', '/excel/');
+    request.open('POST', '/invoice/excel/');
 
     var formSend = new FormData();
     formSend.append('due_date', data.dueDate);
@@ -275,14 +275,15 @@ theForm.addEventListener('submit', function (event) {
     formSend.append('client_country', values.get("clientCountry"));
     formSend.append('client_city', values.get("clientCity"));
 
-    formSend.append('invoice_items', listItemSend);
+    formSend.append('invoice_items', JSON.stringify(listItemSend));
     formSend.append('subtotal', data.subTotal);
     formSend.append('sales_tax', data.taxes);
     formSend.append('note', data.feedback);
     formSend.append('terms', data.paymentMethod);
+    
+    formSend.append('csrfmiddlewaretoken', $('#data-store').attr('csrf'));
 
-    request.send(formSend);
-
+    request.send(formSend);    
 
 
     // Preview and Downloading
